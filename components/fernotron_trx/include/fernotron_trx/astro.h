@@ -1,5 +1,5 @@
 /**
- * \file   fernotron/astro.h
+ * \file   fernotron_trx/astro.h
  * \brief  civil dusk timer calculations
  */
 #pragma once

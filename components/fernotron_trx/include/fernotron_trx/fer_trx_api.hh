@@ -1,12 +1,12 @@
 /**
- * \file fernotron/trx/fer_trx_api.hh
+ * \file fernotron_trx/fer_trx_api.hh
  * \brief C++-API for sending and receiving Fernotron RF messages
  */
 #pragma once
 
-#include <misc/int_types.h>
-#include <fernotron/trx/fer_trx_c_api.h>
-#include <fernotron/astro.h>
+#include <utils_misc/int_types.h>
+#include <fernotron_trx/fer_trx_c_api.h>
+#include <fernotron_trx/astro.h>
 
 /**
  * \class Fer_Trx_API

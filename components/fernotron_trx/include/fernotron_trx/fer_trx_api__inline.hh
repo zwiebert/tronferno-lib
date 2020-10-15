@@ -1,8 +1,8 @@
 /**
- * \file fernotron/trx/fer_trx_api__inline.hh
+ * \file fernotron_trx/fer_trx_api__inline.hh
  * \brief Private implementation
  */
-#include <app/config/proj_app_cfg.h>
+#include <app_config/proj_app_cfg.h>
 
 ////////////////////// loop /////////////////////////
 inline void Fer_Trx_API::loop_rx() {

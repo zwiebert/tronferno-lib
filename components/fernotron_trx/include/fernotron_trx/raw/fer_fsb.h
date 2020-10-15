@@ -2,7 +2,7 @@
 
 #include <stdint.h>
 #include "fer_msg_plain.h"
-#include "misc/int_macros.h"
+#include "utils_misc/int_macros.h"
 
 typedef union fer_sbT {
   uint8_t data[5];

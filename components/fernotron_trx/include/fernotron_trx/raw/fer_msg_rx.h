@@ -9,7 +9,7 @@
 
 #include "fer_fsb.h"
 #include "fer_msg_plain.h"
-#include "fernotron/trx/timer_data.h"
+#include "fernotron_trx/timer_data.h"
 #include <time.h>
 
 extern fer_sbT last_received_sender;

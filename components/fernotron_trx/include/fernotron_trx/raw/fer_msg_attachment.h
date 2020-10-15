@@ -12,7 +12,7 @@
 #include "fer_msg_plain.h"
 #include "fer_radio_timings.h"
 #include "fer_msg_attachment_enum.h"
-#include <misc/bcd.h>
+#include <utils_misc/bcd.h>
 
 #define FER_PRG_BYTE_CT          9
 #define FER_PRG_PACK_CT         18   // 18 lines per program-frame

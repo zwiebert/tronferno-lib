@@ -1,11 +1,11 @@
 /**
- * \file   fernotron/trx/timer_data.h
+ * \file   fernotron_trx/timer_data.h
  * \brief  vocabulary types to program Fernotron automatic (timers)
  */
 
 
 #pragma once
-#include <app/config/proj_app_cfg.h>
+#include <app_config/proj_app_cfg.h>
 #include <stdint.h>
 #include <stdbool.h>
 #include <string.h>

@@ -10,8 +10,8 @@
 #include "stdbool.h"
 #include <stdint.h>
 
-#include "fernotron/trx/raw/fer_fsb.h"
-#include "app/config/proj_app_cfg.h"
+#include "fernotron_trx/raw/fer_fsb.h"
+#include "app_config/proj_app_cfg.h"
 
 #ifdef __cplusplus
   extern "C" {

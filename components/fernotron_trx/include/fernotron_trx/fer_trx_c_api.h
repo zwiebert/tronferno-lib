@@ -1,5 +1,5 @@
 /**
- * \file        fernotron/trx/fer_trx_c_api.h
+ * \file        fernotron_trx/fer_trx_c_api.h
  * \brief       C-API for sending and receiving Fernotron RF messages.
  */
 
@@ -9,8 +9,8 @@
   extern "C" {
 #endif
 
-#include <misc/int_types.h>
-#include <fernotron/trx/timer_data.h>
+#include <utils_misc/int_types.h>
+#include <fernotron_trx/timer_data.h>
 #include <time.h>
 
 #ifndef FER_ADDR_TYPE_PlainSender

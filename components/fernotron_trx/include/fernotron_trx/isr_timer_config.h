@@ -1,5 +1,5 @@
 /**
- * \file fernotron/trx/isr_timer_config.h
+ * \file fernotron_trx/isr_timer_config.h
  * \brief configure timer interrupt
  */
 
