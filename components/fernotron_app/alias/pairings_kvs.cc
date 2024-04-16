@@ -6,21 +6,23 @@
 #include <ctype.h>
 //#include "app_uout/status_output.h"
 #include "fernotron_uout/fer_uo_publish.h"
-#include "key_value_store/kvs_wrapper.h"
+#include "kvs/kvs_wrapper.h"
 #include "utils_misc/int_types.h"
 #include "utils_misc/cstring_utils.h"
 #include "utils_misc/itoa.h"
 #include "debug/dbg.h"
 
-#ifndef DISTRIBUTION
-#define D(x)
-#define DP(x) (ets_printf("db: %s\n", x))
-#define DL (ets_printf("db:line: %d\n", (int) __LINE__))
+#ifdef CONFIG_FERNOTRON_APP_DEBUG
+#define DEBUG
+#define D(x) x
+#define DP(x) (ets_printf("%s: %s\n", logtag, x))
+#define DL (ets_printf("%s:line: %d\n", logtag, (int) __LINE__))
 #else
 #define D(x)
 #define DP(x)
 #define DL
 #endif
+#define logtag "ferno.app.alias"
 
 #define NVS_BUG_WA
 
@@ -205,7 +207,7 @@ static void remove_key(const char *key) {
   }
 }
 
-static kvs_cbrT kvs_foreach_cb(const char *key, kvs_type_t type, const UoutWriter &td) {
+static kvs_cbrT kvs_foreach_cb(const char *key, kvs_type_t type, UoutWriter &td) {
   if (!cpairKey_isValid(key)) {
     remove_key(key);  //delete this invalid key from kvs
     D(ets_printf("%s: key=<%s>, type=%d\n", __func__, key, (int)type));
@@ -228,7 +230,7 @@ static kvs_cbrT kvs_foreach_cb(const char *key, kvs_type_t type, const UoutWrite
     return kvsCb_match;
 }
 
-bool fer_alias_so_output_all_pairings(const class UoutWriter &td, bool content_only) {
+bool fer_alias_so_output_all_pairings(class UoutWriter &td, bool content_only) {
 
   if (!content_only)
     soMsg_pair_all_begin(td);

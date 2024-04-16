@@ -10,7 +10,7 @@
 #include "utils_misc/int_macros.h"
 //#include "app_uout/status_output.h"
 #include "fernotron_uout/fer_uo_publish.h"
-#include "uout/status_json.hh"
+#include "uout/uout_builder_json.hh"
 #include "uout/cli_out.h"
 #include "fernotron/alias/pairings.h"
 #include "fernotron/auto/fau_tdata_store.h"
@@ -20,15 +20,17 @@
 
 #include "move.hh"
 
-#ifndef DISTRIBUTION
+#ifdef CONFIG_FERNOTRON_APP_DEBUG
+#define DEBUG
 #define DB_INFO 0
 #define DT(x)
-#define D(x) x
+#define D(x)
 #else
 #define DB_INFO 0
 #define DT(x)
 #define D(x)
 #endif
+#define logtag "ferno.app.pos"
 
 
 static inline bool cfg_isMemberUnused(gT g, mT m) { return !fer_usedMemberMask.getMember(g, m); };
@@ -132,7 +134,7 @@ void fer_statPos_setPcts(Fer_GmSet *mm, uint8_t p) {
 
 
 
-void fer_statPos_printAllPcts(const class UoutWriter &td) {
+void fer_statPos_printAllPcts(class UoutWriter &td) {
   soMsg_pos_begin(td);
   if (td.tgt() | SO_TGT_FLAG_TXT) {
     pos_map.fer_statPos_forEachPct([&td](const Fer_GmSet &same_pct, uint8_t pct) {

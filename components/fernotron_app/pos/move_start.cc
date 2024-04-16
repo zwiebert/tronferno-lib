@@ -11,13 +11,14 @@
 #include "utils_time/run_time.h"
 //#include "app_uout/status_output.h"
 #include "fernotron_uout/fer_uo_publish.h"
-#include "uout/status_json.hh"
+#include "uout/uout_builder_json.hh"
 #include "fernotron/alias/pairings.h"
 #include "fernotron/auto/fau_tdata_store.h"
 
 #include "move.hh"
 
-#ifndef DISTRIBUTION
+#ifdef CONFIG_FERNOTRON_APP_DEBUG
+#define DEBUG
 #define DB_INFO 0
 #define DT(x)
 #define D(x)
@@ -26,8 +27,7 @@
 #define DT(x)
 #define D(x)
 #endif
-
-
+#define logtag "ferno.app.pos"
 
 
 struct filter {
