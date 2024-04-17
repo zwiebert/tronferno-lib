@@ -39,7 +39,7 @@ fer_cuas_state_T fer_cuas_getState() {
 static bool fer_cuas_active;
 static time_t end_time;
 
-bool fer_cuas_set(uint16_t id, unsigned timeout_secs) {
+bool fer_cuas_set(unsigned timeout_secs) {
   if (end_time != 0)
     return false;
 

@@ -48,7 +48,7 @@ static inline void fer_alias_DISABLE_cb() {
 }
 
 
-bool  fer_alias_auto_set(uint8_t g, uint8_t m, fer_alias_cmds c, uint16_t id, unsigned timeout_secs) {
+bool  fer_alias_auto_set(uint8_t g, uint8_t m, fer_alias_cmds c, unsigned timeout_secs) {
   if (end_time != 0)
     return false;
 

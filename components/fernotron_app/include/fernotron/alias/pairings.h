@@ -62,7 +62,7 @@ bool fer_alias_so_output_all_pairings(class UoutWriter &td, bool content_only = 
  * \return             true on success
  *
  */
-bool fer_alias_auto_set(uint8_t g, uint8_t m, fer_alias_cmds c, uint16_t id, unsigned timeout_secs);
+bool fer_alias_auto_set(uint8_t g, uint8_t m, fer_alias_cmds c, unsigned timeout_secs);
 
 
 // check for result (called from main loop)

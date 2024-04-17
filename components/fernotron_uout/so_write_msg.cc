@@ -12,7 +12,7 @@
 
 #include "txtio/inout.h"
 #include "uout/uout_builder_json.hh"
-#include "uout/cli_out.h"
+#include "uout/uout_builder_plaintext.hh"
 
 #include <unistd.h>
 #include <string.h>
