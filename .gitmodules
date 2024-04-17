@@ -1,0 +1,9 @@
+[submodule "external/--init"]
+	path = external/host-test-idf
+	url = https://github.com/zwiebert/host-test-idf.git
+[submodule "external/components-misc"]
+	path = external/components-misc
+	url = https://github.com/zwiebert/components-misc.git
+[submodule "external/cc1101_ook"]
+	path = external/cc1101_ook
+	url = https://github.com/zwiebert/cc1101_ook.git

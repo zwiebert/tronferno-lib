@@ -6,6 +6,7 @@
  */
 
 #include <uout/so_out.h>
+#include <uout/cli_out.hh>
 #include "fernotron_uout/fer_uo_publish.h"
 #include "fernotron/gm_set.hh"
 #include "utils_misc/int_types.h"

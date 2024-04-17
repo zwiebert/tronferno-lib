@@ -9,6 +9,11 @@
 
 #include "auth_button.hh"
 #include "sep_enable.hh"
+#ifndef TEST_HOST
+#include "gpio/pin.h"
+#else
+inline bool mcu_button_was_pressed() { return false; }
+#endif
 
 class Sep_Auth {
 

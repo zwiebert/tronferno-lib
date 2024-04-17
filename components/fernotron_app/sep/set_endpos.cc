@@ -2,9 +2,8 @@
 #include "fernotron/sep/set_endpos.h"
 #include "fernotron_trx/fer_trx_api.hh"
 #include "fernotron_uout/fer_uo_publish.h"
-//#include "app_uout/status_output.h"
 #include <fernotron_trx/fer_trx_c_api.h>
-#include "gpio/pin.h"
+//#include "gpio/pin.h"
 
 #include <utils_time/time_out_secs.hh>
 #include "txtio/inout.h"
