@@ -10,11 +10,11 @@
 #include "kvs/kvs_wrapper.h"
 #include "utils_misc/int_types.h"
 #include "debug/dbg.h"
+#include "txtio/inout.h"
 #include <alloca.h>
 #include <string.h>
 
 #ifndef TEST_HOST
-#define printf ets_printf
 #define DB(x) do { if (TXTIO_IS_VERBOSE(vrbDebug)) { x; } } while(0)
 #define DB2(x) DB(x)
 #else
@@ -42,7 +42,7 @@ private:
 
 static int delete_shadowded_kv(uint8_t group, uint8_t memb) {
   int result = 0;
-  DB2(printf("delete shadowed files(group=%d, memb=%d)\n", (int)group, (int)memb));
+  DB2(db_printf("delete shadowed files(group=%d, memb=%d)\n", (int)group, (int)memb));
 
   kvshT handle = kvs_open(TD_KVS_NAMESPACE, kvs_WRITE);
   if (handle) {
@@ -51,7 +51,7 @@ static int delete_shadowded_kv(uint8_t group, uint8_t memb) {
       const mT m = it.getM();
       if ((group == 0 || group == g) && (memb == 0 || (memb == m && fer_usedMemberMask.getMember(g, m)))) {
         if (kvs_erase_key(handle, TdKey(g, m))) {
-          DB2(printf("shadow deleted: g=%d, m=%d\n", (int)g, (int)m));
+          DB2(db_printf("shadow deleted: g=%d, m=%d\n", (int)g, (int)m));
           ++result;
         }
       }

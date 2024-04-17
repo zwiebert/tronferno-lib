@@ -11,8 +11,9 @@
 #include "fernotron/pos/shutter_pct.h"
 
 #include "fernotron/fer_main.h"
-#include "debug/dbg.h"
 #include <fernotron_trx/fer_trx_api.hh>
+#include "txtio/inout.h"
+#include "debug/dbg.h"
 
 #define GRP_MAX 7
 #define MBR_MAX 7

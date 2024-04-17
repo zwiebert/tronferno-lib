@@ -10,10 +10,10 @@
 #include "storage/storage.h"
 #include "utils_misc/int_types.h"
 #include "debug/dbg.h"
+#include "txtio/inout.h"
 #include "fernotron/fer_pct.h"
 
 #ifndef TEST_HOST
-#define printf ets_printf
 #define DB(x) do { if (TXTIO_IS_VERBOSE(vrbDebug)) { x; } } while(0)
 #define DB2(x) DB(x)
 #else
@@ -47,13 +47,13 @@ static bool  read_data2(Fer_TimerData *p, const char *file_name) {
 
 static int delete_shadowded_files(uint8_t group, uint8_t memb) {
   int result = 0;
-  DB2(printf("delete shadowed files(group=%d, memb=%d)\n", (int)group, (int)memb));
+  DB2(db_printf("delete shadowed files(group=%d, memb=%d)\n", (int)group, (int)memb));
   for (Fer_Gm_Counter it; it; ++it) {
     const gT g = it.getG();
     const mT m = it.getM();
     if ((group == 0 || group == g) && (memb == 0 || (memb == m && fer_usedMemberMask.getMember(g, m)))) {
       if (stor_fileDelete(gm_to_file_name(g, m))) {
-        DB2(printf("shadow deleted: g=%d, m=%d, fid=%s\n", (int)g, (int)m, gm_to_file_name(g, m)));
+        DB2(db_printf("shadow deleted: g=%d, m=%d, fid=%s\n", (int)g, (int)m, gm_to_file_name(g, m)));
         ++result;
       }
     }
