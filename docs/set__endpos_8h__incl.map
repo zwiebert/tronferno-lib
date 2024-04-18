@@ -1,14 +1,14 @@
-<map id="fernotron_app/include/fernotron/sep/set_endpos.h" name="fernotron_app/include/fernotron/sep/set_endpos.h">
-<area shape="rect" id="node1" title="Mode for setting shutter end positions." alt="" coords="5,5,208,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="9,281,92,307"/>
-<area shape="rect" id="node3" href="$fer__trx__c__api_8h.html" title="C&#45;API for sending and receiving Fernotron RF messages." alt="" coords="179,95,333,136"/>
-<area shape="rect" id="node4" title=" " alt="" coords="85,191,249,218"/>
-<area shape="rect" id="node5" href="$timer__data_8h.html" title="vocabulary types to program Fernotron automatic (timers)" alt="" coords="273,184,420,225"/>
-<area shape="rect" id="node12" title=" " alt="" coords="444,191,508,218"/>
-<area shape="rect" id="node6" title=" " alt="" coords="119,281,190,307"/>
-<area shape="rect" id="node7" title=" " alt="" coords="214,281,285,307"/>
-<area shape="rect" id="node8" title=" " alt="" coords="309,281,379,307"/>
-<area shape="rect" id="node9" title=" " alt="" coords="404,281,471,307"/>
-<area shape="rect" id="node10" title=" " alt="" coords="495,273,631,315"/>
-<area shape="rect" id="node11" title=" " alt="" coords="655,281,758,307"/>
+<map id="fernotron/sep/set_endpos.h" name="fernotron/sep/set_endpos.h">
+<area shape="rect" id="node1" title="Mode for setting shutter end positions." alt="" coords="5,5,204,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="7,266,90,293"/>
+<area shape="rect" id="node3" href="$fer__trx__c__api_8h.html" title="C&#45;API for sending and receiving Fernotron RF messages." alt="" coords="177,80,331,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="83,177,247,203"/>
+<area shape="rect" id="node5" href="$timer__data_8h.html" title="vocabulary types to program Fernotron automatic (timers)" alt="" coords="271,169,418,211"/>
+<area shape="rect" id="node12" title=" " alt="" coords="442,177,506,203"/>
+<area shape="rect" id="node6" title=" " alt="" coords="117,266,188,293"/>
+<area shape="rect" id="node7" title=" " alt="" coords="212,266,283,293"/>
+<area shape="rect" id="node8" title=" " alt="" coords="307,266,377,293"/>
+<area shape="rect" id="node9" title=" " alt="" coords="402,266,469,293"/>
+<area shape="rect" id="node10" title=" " alt="" coords="493,259,629,300"/>
+<area shape="rect" id="node11" title=" " alt="" coords="653,266,756,293"/>
 </map>

@@ -1,5 +1,5 @@
-<map id="fernotron_app/include/fernotron/pos/shutter_pct.h" name="fernotron_app/include/fernotron/pos/shutter_pct.h">
-<area shape="rect" id="node1" title="include positions_static.h and positions_dynamic.h" alt="" coords="65,5,268,47"/>
+<map id="fernotron/pos/shutter_pct.h" name="fernotron/pos/shutter_pct.h">
+<area shape="rect" id="node1" title="include positions_static.h and positions_dynamic.h" alt="" coords="87,5,246,47"/>
 <area shape="rect" id="node2" href="$positions__static_8h.html" title="Store and retrieve shutter positions (persistently)" alt="" coords="41,177,177,203"/>
 <area shape="rect" id="node7" href="$positions__dynamic_8h.html" title="Keep track of positions for a currently moving shutter." alt="" coords="147,95,303,121"/>
 <area shape="rect" id="node3" href="$fer__pct_8h.html" title="class Pct to represent shutter opening percentage" alt="" coords="129,266,271,293"/>

@@ -1,5 +1,5 @@
-<map id="fernotron_app/include/fernotron/cuas/cuid_auto_set.h" name="fernotron_app/include/fernotron/cuas/cuid_auto_set.h">
-<area shape="rect" id="node1" title="Set our default central unit id from a received RF message." alt="" coords="15,5,179,61"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,109,88,136"/>
-<area shape="rect" id="node3" title=" " alt="" coords="113,109,183,136"/>
+<map id="fernotron/cuas/cuid_auto_set.h" name="fernotron/cuas/cuid_auto_set.h">
+<area shape="rect" id="node1" title="Set our default central unit id from a received RF message." alt="" coords="24,5,171,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,88,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="113,95,183,121"/>
 </map>

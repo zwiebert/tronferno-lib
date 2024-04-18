@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>tronferno-lib: fernotron_trx/include/fernotron_trx/raw/fer_msg_plain.h Source File</title>
+<title>tronferno-lib: fernotron_trx/raw/fer_msg_plain.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -106,10 +106,10 @@ $(document).ready(function(){initNavTree('fer__msg__plain_8h_source.html',''); i
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structFer__Cmd.html">   19</a></span>&#160;<span class="keyword">struct</span> <span class="keyword">__attribute__</span> ((packed)) <a class="code" href="structFer__Cmd.html">Fer_Cmd</a>  {</div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structFer__Cmd.html#ac2e0770a0d2970996452028f35f71e55">   20</a></span>&#160;  uint8_t <a class="code" href="structFer__Cmd.html#ac2e0770a0d2970996452028f35f71e55">addr</a>[<a class="code" href="fer__msg__plain_8h.html#aa3765ce89c8831ff49d3120977290917">FER_CMD_ADDR_CT</a>];  <span class="comment">///&lt; Device address</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structFer__Cmd.html#aab59aac5e8668721021d3b639451d3a1">   21</a></span>&#160;  <a class="code" href="fer__msg__plain__enum_8h.html#af3a008f6ae685dc6d5b99e20a0782936">fer_memb</a> <a class="code" href="structFer__Cmd.html#aab59aac5e8668721021d3b639451d3a1">memb</a> :4;  <span class="comment">///&lt; /link fer_memb /endlink</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structFer__Cmd.html#aab59aac5e8668721021d3b639451d3a1">   21</a></span>&#160;  <a class="code" href="fer__msg__plain__enum_8h.html#af3a008f6ae685dc6d5b99e20a0782936">fer_memb</a> <a class="code" href="structFer__Cmd.html#aab59aac5e8668721021d3b639451d3a1">memb</a> :4;  <span class="comment">///&lt; \link fer_memb \endlink</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structFer__Cmd.html#af7a24d5a5af50a9e90fd8edb1a52d3d7">   22</a></span>&#160;  uint8_t <a class="code" href="structFer__Cmd.html#af7a24d5a5af50a9e90fd8edb1a52d3d7">tgl</a> :4;  <span class="comment">///&lt; kind of a message ID. Incremented for each unique message sent</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structFer__Cmd.html#aac4fe8efffe0bfc7610371ec6649f99a">   23</a></span>&#160;  <a class="code" href="fer__msg__plain__enum_8h.html#a48daff1cedb7c9370568a477f77f0435">fer_cmd</a> <a class="code" href="structFer__Cmd.html#aac4fe8efffe0bfc7610371ec6649f99a">cmd</a> :4;  <span class="comment">///&lt; /link fer_cmd /endlink</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structFer__Cmd.html#a54cfc7b6e0bb02dfc8c1b23aaa801662">   24</a></span>&#160;  fer_grp <a class="code" href="structFer__Cmd.html#a54cfc7b6e0bb02dfc8c1b23aaa801662">grp</a> :4;  <span class="comment">///&lt; /link fer_grp /endlink</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structFer__Cmd.html#aac4fe8efffe0bfc7610371ec6649f99a">   23</a></span>&#160;  <a class="code" href="fer__msg__plain__enum_8h.html#a48daff1cedb7c9370568a477f77f0435">fer_cmd</a> <a class="code" href="structFer__Cmd.html#aac4fe8efffe0bfc7610371ec6649f99a">cmd</a> :4;  <span class="comment">///&lt; \link fer_cmd \endlink</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structFer__Cmd.html#a54cfc7b6e0bb02dfc8c1b23aaa801662">   24</a></span>&#160;  fer_grp <a class="code" href="structFer__Cmd.html#a54cfc7b6e0bb02dfc8c1b23aaa801662">grp</a> :4;  <span class="comment">///&lt; \link fer_grp \endlink</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
@@ -240,8 +240,8 @@ $(document).ready(function(){initNavTree('fer__msg__plain_8h_source.html',''); i
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_19c46a59b9d461724b1e6a373b3f8aa6.html">fernotron_trx</a></li><li class="navelem"><a class="el" href="dir_5fa24bc490feca5c4d24dafcf260cfb3.html">include</a></li><li class="navelem"><a class="el" href="dir_e5d9e94bf22f4bf842600a7957b831f7.html">fernotron_trx</a></li><li class="navelem"><a class="el" href="dir_622abca4438137d4321783d4beacf511.html">raw</a></li><li class="navelem"><a class="el" href="fer__msg__plain_8h.html">fer_msg_plain.h</a></li>
-    <li class="footer">Generated on Thu Apr 18 2024 14:46:32 for tronferno-lib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="navelem"><a class="el" href="dir_e5d9e94bf22f4bf842600a7957b831f7.html">fernotron_trx</a></li><li class="navelem"><a class="el" href="dir_622abca4438137d4321783d4beacf511.html">raw</a></li><li class="navelem"><a class="el" href="fer__msg__plain_8h.html">fer_msg_plain.h</a></li>
+    <li class="footer">Generated on Thu Apr 18 2024 16:03:36 for tronferno-lib by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
