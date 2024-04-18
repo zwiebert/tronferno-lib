@@ -1,0 +1,5 @@
+<map id="fau_tminutes.h" name="fau_tminutes.h">
+<area shape="rect" id="node1" title="Represent when each kind of timer will be scheduled for a given day and g/m. Calculate the next event..." alt="" coords="17,5,137,32"/>
+<area shape="rect" id="node2" href="$fau__tevent_8hh_source.html" title=" " alt="" coords="21,80,133,107"/>
+<area shape="rect" id="node3" href="$fau__next__event_8hh_source.html" title=" " alt="" coords="5,155,148,181"/>
+</map>

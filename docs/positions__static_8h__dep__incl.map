@@ -1,0 +1,5 @@
+<map id="positions_static.h" name="positions_static.h">
+<area shape="rect" id="node1" title="Store and retrieve shutter positions (persistently)" alt="" coords="5,5,141,32"/>
+<area shape="rect" id="node2" href="$shutter__pct_8h.html" title="include positions_static.h and positions_dynamic.h" alt="" coords="20,80,127,107"/>
+<area shape="rect" id="node3" href="$commands_8h.html" title="commands to move or stop a shutter with position support" alt="" coords="20,155,127,181"/>
+</map>

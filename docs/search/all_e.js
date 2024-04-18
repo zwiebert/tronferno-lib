@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['sd_475',['sd',['../unionfer__cmd__row.html#a3c240b8d88ce7ca83320ee6e72ec7284',1,'fer_cmd_row::sd()'],['../unionfer__astro__row.html#ab3a71a3d08f57381701f3c0d74df6e9b',1,'fer_astro_row::sd()'],['../unionfer__rtc.html#a9d894ca02d675ec7a5bb044a850a1b03',1,'fer_rtc::sd()'],['../unionfer__sbT.html#a9adec8d6e005ac4a8d1f597b5411e96c',1,'fer_sbT::sd()']]],
+  ['secs_476',['secs',['../structfer__rtc__sd.html#a994cc4c75f4d54bdcf01bc9c242f2d8a',1,'fer_rtc_sd']]],
+  ['send_5fcmd_477',['send_cmd',['../classFer__Trx__API.html#aaa2f7a63d389ce2e053408f068b4a4ba',1,'Fer_Trx_API::send_cmd(uint32_t a, uint8_t g, uint8_t m, fer_if_cmd cmd, uint8_t repeats=0, uint16_t delay=0, uint16_t stopDelay=0)'],['../classFer__Trx__API.html#a98928677eea5987dcb22d97e0b9ac28c',1,'Fer_Trx_API::send_cmd(const Fer_MsgCmd &amp;msg)']]],
+  ['send_5fempty_5ftimer_478',['send_empty_timer',['../classFer__Trx__API.html#aaeaa85f90ae2c207988b974fc0fc8709',1,'Fer_Trx_API::send_empty_timer(uint32_t a, uint8_t g, uint8_t m, time_t rtc)'],['../classFer__Trx__API.html#a517ba72c6a9975ff78f5e16fd86cb049',1,'Fer_Trx_API::send_empty_timer(const Fer_MsgRtc &amp;msg)']]],
+  ['send_5frtc_479',['send_rtc',['../classFer__Trx__API.html#a553eb1261289de2e35741e73b43f132c',1,'Fer_Trx_API::send_rtc(const Fer_MsgRtc &amp;msg)'],['../classFer__Trx__API.html#ab4cf139f06c0aeddd76cf6c63d7d70bb',1,'Fer_Trx_API::send_rtc(uint32_t a, uint8_t g, uint8_t m, time_t rtc)']]],
+  ['send_5ftimer_480',['send_timer',['../classFer__Trx__API.html#af186fbc3d1d3c8ff1811fe95bc2f81e7',1,'Fer_Trx_API::send_timer(const Fer_MsgTimer &amp;msg)'],['../classFer__Trx__API.html#a2372eed5c45f7b9cfa510251d6510400',1,'Fer_Trx_API::send_timer(uint32_t a, uint8_t g, uint8_t m, time_t rtc, const Fer_TimerData &amp;td)']]],
+  ['set_5fendpos_2eh_481',['set_endpos.h',['../set__endpos_8h.html',1,'']]],
+  ['setgroup_482',['setGroup',['../classFer__GmSet.html#a970a188a2b9e7e079314aacf1ca3e96b',1,'Fer_GmSet']]],
+  ['setmember_483',['setMember',['../classFer__GmSet.html#ad138492ce27a2eb44ecc22abadd22907',1,'Fer_GmSet']]],
+  ['shutter_5fpct_2eh_484',['shutter_pct.h',['../shutter__pct_8h.html',1,'']]],
+  ['shutter_5fprefs_2eh_485',['shutter_prefs.h',['../shutter__prefs_8h.html',1,'']]],
+  ['shutter_5ftimings_486',['shutter_timings',['../structshutter__timings.html',1,'']]],
+  ['so_5farg_5fagm_5ft_487',['so_arg_agm_t',['../structso__arg__agm__t.html',1,'']]],
+  ['so_5farg_5famm_5ft_488',['so_arg_amm_t',['../structso__arg__amm__t.html',1,'']]],
+  ['so_5farg_5fcuas_5ft_489',['so_arg_cuas_t',['../structso__arg__cuas__t.html',1,'']]],
+  ['so_5farg_5fgm_5ft_490',['so_arg_gm_t',['../structso__arg__gm__t.html',1,'']]],
+  ['so_5farg_5fgmp_5ft_491',['so_arg_gmp_t',['../structso__arg__gmp__t.html',1,'']]],
+  ['so_5farg_5fgmt_5ft_492',['so_arg_gmt_t',['../structso__arg__gmt__t.html',1,'']]],
+  ['so_5farg_5fkmm_5ft_493',['so_arg_kmm_t',['../structso__arg__kmm__t.html',1,'']]],
+  ['so_5farg_5fmmp_5ft_494',['so_arg_mmp_t',['../structso__arg__mmp__t.html',1,'']]],
+  ['so_5farg_5fpras_5ft_495',['so_arg_pras_t',['../structso__arg__pras__t.html',1,'']]],
+  ['so_5farg_5fsep_5ft_496',['so_arg_sep_t',['../structso__arg__sep__t.html',1,'']]],
+  ['stopdelay_497',['stopDelay',['../structFer__MsgCmd.html#a79d2aecab9e75e190edac9418ec52074',1,'Fer_MsgCmd']]],
+  ['sunauto_498',['sunAuto',['../structfer__rtc__sd.html#a7c9c0950401b564eb6b6a6bb818363dc',1,'fer_rtc_sd']]]
+];

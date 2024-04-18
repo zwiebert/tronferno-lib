@@ -132,7 +132,7 @@ $(config_h) $(config_cmake) config: $(_config)
 	python -m kconfgen  --kconfig $(THIS_ROOT)/Kconfig.projbuild --config $(_config) --output header $(config_h) --output cmake $(config_cmake)
 	cp $(config_h) $(config_cmake) $(THIS_ROOT)/test/host_test/ 
 
-test.cm.configure: $(config_h) $(config_cmake) 
+test.cm.configure: $(config_h) $(config_cmake)
 	rm -fr $(HOST_TEST_BUILD_PATH)
 	mkdir -p $(HOST_TEST_BUILD_PATH)/config
 	make $(config_h) $(config_cmake)
@@ -180,4 +180,14 @@ $(DOXY_BUILD_PATH)/api/input_files: $(DOXY_BUILD_PATH)/api FORCE
 
 $(DOXY_BUILD_PATH)/dev/input_files: $(DOXY_BUILD_PATH)/dev FORCE
 	git ls-files '*.h' '*.c' '*.hh' '*.cc' '*.cpp' '*.md'  > $@
+
+########### github pages ###############
+docs_html=$(DOXY_BUILD_PATH)/api/html
+
+$(docs_html):$(DOXY_BUILD_PATH)/api/input_files
+	make doxy-api-build
+docs:$(docs_html)
+	-rm -rf docs
+	cp -r $(docs_html) docs
+	git add docs
 

@@ -1,0 +1,22 @@
+<map id="timer_data.h" name="timer_data.h">
+<area shape="rect" id="node1" title="vocabulary types to program Fernotron automatic (timers)" alt="" coords="173,5,278,32"/>
+<area shape="rect" id="node2" href="$fau__tdata__store_8h.html" title="Persistent timer data storage." alt="" coords="5,80,141,107"/>
+<area shape="rect" id="node3" href="$fau__tminutes_8h.html" title="Represent when each kind of timer will be scheduled for a given day and g/m. Calculate the next event..." alt="" coords="165,80,285,107"/>
+<area shape="rect" id="node6" href="$fer__trx__c__api_8h.html" title="C&#45;API for sending and receiving Fernotron RF messages." alt="" coords="453,80,571,107"/>
+<area shape="rect" id="node4" href="$fau__tevent_8hh_source.html" title=" " alt="" coords="99,155,211,181"/>
+<area shape="rect" id="node5" href="$fau__next__event_8hh_source.html" title=" " alt="" coords="75,229,218,256"/>
+<area shape="rect" id="node7" href="$positions__dynamic_8h.html" title="Keep track of positions for a currently moving shutter." alt="" coords="862,155,1018,181"/>
+<area shape="rect" id="node10" href="$set__endpos_8h.html" title="Mode for setting shutter end positions." alt="" coords="529,155,637,181"/>
+<area shape="rect" id="node11" href="$fer__trx__api_8hh.html" title="C++&#45;API for sending and receiving Fernotron RF messages." alt="" coords="661,155,773,181"/>
+<area shape="rect" id="node13" href="$fer__fsb_8h.html" title="Plain raw message." alt="" coords="294,229,373,256"/>
+<area shape="rect" id="node14" href="$fer__msg__tx_8h.html" title="Send raw messages." alt="" coords="160,304,267,331"/>
+<area shape="rect" id="node16" href="$fer__msg__plain_8h.html" title="Data structure of plain messages or header of extended messages." alt="" coords="378,155,505,181"/>
+<area shape="rect" id="node19" href="$fer__radio__trx_8h.html" title="RF transceiver." alt="" coords="760,304,877,331"/>
+<area shape="rect" id="node8" href="$shutter__pct_8h.html" title="include positions_static.h and positions_dynamic.h" alt="" coords="896,229,1003,256"/>
+<area shape="rect" id="node9" href="$commands_8h.html" title="commands to move or stop a shutter with position support" alt="" coords="901,304,1008,331"/>
+<area shape="rect" id="node12" href="$fer__print_8h.html" title="Print raw message as formatted text to standard output (for debug purposes)." alt="" coords="646,304,735,331"/>
+<area shape="rect" id="node15" href="$fer__rawmsg__build_8h.html" title="builder functions to construct (extended) raw messages" alt="" coords="291,304,442,331"/>
+<area shape="rect" id="node17" href="$repeater_8h_source.html" title=" " alt="" coords="397,229,485,256"/>
+<area shape="rect" id="node18" href="$fer__msg__attachment_8h.html" title="Extended messages." alt="" coords="510,229,679,256"/>
+<area shape="rect" id="node20" href="$fer__rawmsg__buffer_8h.html" title="Global static buffers for raw messages." alt="" coords="467,304,621,331"/>
+</map>

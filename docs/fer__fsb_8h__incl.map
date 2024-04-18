@@ -1,0 +1,18 @@
+<map id="fer_fsb.h" name="fer_fsb.h">
+<area shape="rect" id="node1" title="Plain raw message." alt="" coords="523,5,601,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="700,341,771,367"/>
+<area shape="rect" id="node3" href="$fer__msg__plain_8h.html" title="Data structure of plain messages or header of extended messages." alt="" coords="400,80,527,107"/>
+<area shape="rect" id="node6" href="$fer__trx__c__api_8h.html" title="C&#45;API for sending and receiving Fernotron RF messages." alt="" coords="149,155,303,196"/>
+<area shape="rect" id="node16" title=" " alt="" coords="573,162,749,189"/>
+<area shape="rect" id="node4" href="$fer__msg__type_8h.html" title="kinds of messages" alt="" coords="539,251,662,278"/>
+<area shape="rect" id="node5" href="$fer__msg__plain__enum_8h.html" title="Raw message for plain commands." alt="" coords="378,162,549,189"/>
+<area shape="rect" id="node7" title=" " alt="" coords="5,251,169,278"/>
+<area shape="rect" id="node8" href="$timer__data_8h.html" title="vocabulary types to program Fernotron automatic (timers)" alt="" coords="282,244,429,285"/>
+<area shape="rect" id="node15" title=" " alt="" coords="194,251,258,278"/>
+<area shape="rect" id="node9" title=" " alt="" coords="25,341,107,367"/>
+<area shape="rect" id="node10" title=" " alt="" coords="132,341,203,367"/>
+<area shape="rect" id="node11" title=" " alt="" coords="227,341,297,367"/>
+<area shape="rect" id="node12" title=" " alt="" coords="322,341,389,367"/>
+<area shape="rect" id="node13" title=" " alt="" coords="413,333,549,375"/>
+<area shape="rect" id="node14" title=" " alt="" coords="573,341,676,367"/>
+</map>
