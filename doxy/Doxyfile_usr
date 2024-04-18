@@ -32,7 +32,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = components-mcu
+PROJECT_NAME           = tronferno-lib
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -44,7 +44,7 @@ PROJECT_NUMBER         =
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          =
+PROJECT_BRIEF          = Library for controlling Fernotron receivers and emulating a programming centre
 
 # With the PROJECT_LOGO tag one can specify a logo or an icon that is included
 # in the documentation. The maximum height of the logo should not exceed 55
@@ -170,35 +170,7 @@ FULL_PATH_NAMES        = YES
 # will be relative from the directory where doxygen is started.
 # This tag requires that the tag FULL_PATH_NAMES is set to YES.
 
-STRIP_FROM_PATH        = comp/app/tronferno/app_cli/include \
-                         comp/config/app_config/include \
-                         comp/app/tronferno/app_http_server/include \
-                         comp/app/tronferno/app_main/include \
-                         comp/app/tronferno/app_misc/include \
-                         comp/app/tronferno/app_mqtt/include \
-                         comp/app/tronferno/app_settings/include \
-                         comp/app/tronferno/app_uout/include \
-                         comp/app/tronferno/app_webapp/include \
-                         comp/library/fernotron_app/include \
-                         comp/library/fernotron_lib/include \
-                         comp/library/fernotron_trx/include \
-                         comp/library/gpio/include \
-                         comp/components-mcu/cli/include \
-                         comp/components-mcu/config_kvs/include \
-                         comp/components-mcu/firmware_update/include \
-                         comp/components-mcu/jsmn/include \
-                         comp/components-mcu/key_value_store/include \
-                         comp/components-mcu/nanopb/include \
-                         comp/components-mcu/net_http_server/include \
-                         comp/components-mcu/net/include \
-                         comp/components-mcu/net_mqtt/include \
-                         comp/components-mcu/stm32/include \
-                         comp/components-mcu/storage/include \
-                         comp/components-mcu/txtio/include \
-                         comp/components-mcu/uout/include \
-                         comp/components-mcu/utils_debug/include \
-                         comp/components-mcu/utils_misc/include \
-                         comp/components-mcu/utils_time/include
+STRIP_FROM_PATH        = /home/bertw/proj/mcu/libs/tronferno-lib/components/
 
 # The STRIP_FROM_INC_PATH tag can be used to strip a user-defined part of the
 # path mentioned in the documentation of a class, which tells the reader which

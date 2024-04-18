@@ -176,10 +176,10 @@ $(DOXY_BUILD_PATH)/usr/input_files: $(DOXY_BUILD_PATH)/usr FORCE
 	echo "" > $@
 
 $(DOXY_BUILD_PATH)/api/input_files: $(DOXY_BUILD_PATH)/api FORCE
-	git ls-files '*.h' '*.hh' '*.md' | fgrep -e include -e README.md  > $@
+	git ls-files 'components/**.h' 'components/**.hh' '*.md' | fgrep -e include -e README.md  > $@
 
 $(DOXY_BUILD_PATH)/dev/input_files: $(DOXY_BUILD_PATH)/dev FORCE
-	git ls-files '*.h' '*.c' '*.hh' '*.cc' '*.cpp' '*.md'  > $@
+	git ls-files 'components/**.h' 'components/**.c' 'components/**.hh' 'components/**.cc' 'components/**.cpp' '*.md'  > $@
 
 ########### github pages ###############
 docs_html=$(DOXY_BUILD_PATH)/api/html
