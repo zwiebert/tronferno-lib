@@ -18,10 +18,10 @@
  */
 struct __attribute__ ((packed)) Fer_Cmd  {
   uint8_t addr[FER_CMD_ADDR_CT];  ///< Device address
-  fer_memb memb :4;  ///< /link fer_memb /endlink
+  fer_memb memb :4;  ///< \link fer_memb \endlink
   uint8_t tgl :4;  ///< kind of a message ID. Incremented for each unique message sent
-  fer_cmd cmd :4;  ///< /link fer_cmd /endlink
-  fer_grp grp :4;  ///< /link fer_grp /endlink
+  fer_cmd cmd :4;  ///< \link fer_cmd \endlink
+  fer_grp grp :4;  ///< \link fer_grp \endlink
 };
 
 

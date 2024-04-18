@@ -50,7 +50,7 @@ bool fer_cuas_set_check(const uint32_t cu);
 
 /**
  * \brief     Get current state of this module by polling
- * \return    current state. Any value of /link fer_cuas_state_T /endlink
+ * \return    current state. Any value of \link fer_cuas_state_T \endlink
  */
 fer_cuas_state_T fer_cuas_getState();
 
