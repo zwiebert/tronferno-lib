@@ -170,7 +170,9 @@ FULL_PATH_NAMES        = YES
 # will be relative from the directory where doxygen is started.
 # This tag requires that the tag FULL_PATH_NAMES is set to YES.
 
-STRIP_FROM_PATH        = /home/bertw/proj/mcu/libs/tronferno-lib/components/
+STRIP_FROM_PATH        = /home/bertw/proj/mcu/libs/tronferno-lib/components/fernotron_trx/include \
+                         /home/bertw/proj/mcu/libs/tronferno-lib/components/fernotron_app/include \
+                         /home/bertw/proj/mcu/libs/tronferno-lib/components/fernotron_uout/include
 
 # The STRIP_FROM_INC_PATH tag can be used to strip a user-defined part of the
 # path mentioned in the documentation of a class, which tells the reader which
@@ -179,7 +181,9 @@ STRIP_FROM_PATH        = /home/bertw/proj/mcu/libs/tronferno-lib/components/
 # specify the list of include paths that are normally passed to the compiler
 # using the -I flag.
 
-STRIP_FROM_INC_PATH    =
+STRIP_FROM_INC_PATH    = components/fernotron_trx/include \
+                         components/fernotron_app/include \
+                         components/fernotron_uout/include
 
 # If the SHORT_NAMES tag is set to YES, doxygen will generate much shorter (but
 # less readable) file names. This can be useful is your file systems doesn't
