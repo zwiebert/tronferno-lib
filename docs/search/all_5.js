@@ -237,7 +237,7 @@ var searchData=
   ['fer_5fsb_5fput_5fngrp_273',['FER_SB_PUT_NGRP',['../fer__fsb_8h.html#a952d413ed957d1cd2bb4ef0e811181b0',1,'fer_fsb.h']]],
   ['fer_5fsb_5fput_5fnmemb_274',['FER_SB_PUT_NMEMB',['../fer__fsb_8h.html#ade4d9b5a647e04d32788abe18834296e',1,'fer_fsb.h']]],
   ['fer_5fsb_5fput_5ftgl_275',['FER_SB_PUT_TGL',['../fer__fsb_8h.html#ad501029284a3cd6ed02e0606d92e5c9c',1,'fer_fsb.h']]],
-  ['fer_5fsbt_276',['fer_sbT',['../unionfer__sbT.html',1,'fer_sbT'],['../fer__fsb_8h.html#ad3622abec907ead0b51051339c08577e',1,'fer_sbT():&#160;fer_fsb.h']]],
+  ['fer_5fsbt_276',['fer_sbT',['../fer__fsb_8h.html#ad3622abec907ead0b51051339c08577e',1,'fer_sbT():&#160;fer_fsb.h'],['../unionfer__sbT.html',1,'fer_sbT']]],
   ['fer_5fsend_5fmsg_277',['fer_send_msg',['../fer__msg__tx_8h.html#a3e4b20310333d4f2ddb00408399e4816',1,'fer_msg_tx.h']]],
   ['fer_5fsend_5fmsg_5frtc_278',['fer_send_msg_rtc',['../fer__msg__tx_8h.html#a6a8d351902e20ce1694709b3b9815d5c',1,'fer_msg_tx.h']]],
   ['fer_5fsend_5fmsg_5fwith_5fstop_279',['fer_send_msg_with_stop',['../fer__msg__tx_8h.html#aa4cfa6f6713be02185eb3714d5da3948',1,'fer_msg_tx.h']]],

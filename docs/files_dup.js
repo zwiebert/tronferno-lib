@@ -1,45 +1,6 @@
 var files_dup =
 [
-    [ "astro.h", "astro_8h.html", "astro_8h" ],
-    [ "commands.h", "commands_8h.html", "commands_8h" ],
-    [ "cuid_auto_set.h", "cuid__auto__set_8h.html", "cuid__auto__set_8h" ],
-    [ "fau_next_event.hh", "fau__next__event_8hh_source.html", null ],
-    [ "fau_tdata_store.h", "fau__tdata__store_8h.html", "fau__tdata__store_8h" ],
-    [ "fau_tevent.hh", "fau__tevent_8hh_source.html", null ],
-    [ "fau_tminutes.h", "fau__tminutes_8h.html", "fau__tminutes_8h" ],
-    [ "fer_fsb.h", "fer__fsb_8h.html", "fer__fsb_8h" ],
-    [ "fer_main.h", "fer__main_8h.html", "fer__main_8h" ],
-    [ "fer_msg_attachment.h", "fer__msg__attachment_8h.html", "fer__msg__attachment_8h" ],
-    [ "fer_msg_attachment_enum.h", "fer__msg__attachment__enum_8h.html", "fer__msg__attachment__enum_8h" ],
-    [ "fer_msg_plain.h", "fer__msg__plain_8h.html", "fer__msg__plain_8h" ],
-    [ "fer_msg_plain_enum.h", "fer__msg__plain__enum_8h.html", "fer__msg__plain__enum_8h" ],
-    [ "fer_msg_tx.h", "fer__msg__tx_8h.html", "fer__msg__tx_8h" ],
-    [ "fer_msg_type.h", "fer__msg__type_8h.html", "fer__msg__type_8h" ],
-    [ "fer_pct.h", "fer__pct_8h.html", [
-      [ "Pct", "structPct.html", "structPct" ]
-    ] ],
-    [ "fer_print.h", "fer__print_8h.html", "fer__print_8h" ],
-    [ "fer_radio_timings_us.h", "fer__radio__timings__us_8h.html", "fer__radio__timings__us_8h" ],
-    [ "fer_radio_trx.h", "fer__radio__trx_8h.html", "fer__radio__trx_8h" ],
-    [ "fer_rawmsg_buffer.h", "fer__rawmsg__buffer_8h.html", "fer__rawmsg__buffer_8h" ],
-    [ "fer_rawmsg_build.h", "fer__rawmsg__build_8h.html", "fer__rawmsg__build_8h" ],
-    [ "fer_trx_api.hh", "fer__trx__api_8hh.html", "fer__trx__api_8hh" ],
-    [ "fer_trx_api__inline.hh", "fer__trx__api____inline_8hh.html", null ],
-    [ "fer_trx_c_api.h", "fer__trx__c__api_8h.html", "fer__trx__c__api_8h" ],
-    [ "fer_uo_publish.h", "fer__uo__publish_8h.html", "fer__uo__publish_8h" ],
-    [ "generated_opts.hh", "generated__opts_8hh_source.html", null ],
-    [ "gm_set.hh", "gm__set_8hh.html", "gm__set_8hh" ],
-    [ "isr_timer_config.h", "isr__timer__config_8h.html", "isr__timer__config_8h" ],
-    [ "options.hh", "options_8hh.html", "options_8hh" ],
-    [ "pairings.h", "pairings_8h.html", "pairings_8h" ],
-    [ "positions_dynamic.h", "positions__dynamic_8h.html", "positions__dynamic_8h" ],
-    [ "positions_static.h", "positions__static_8h.html", "positions__static_8h" ],
-    [ "repeater.h", "repeater_8h_source.html", null ],
-    [ "set_endpos.h", "set__endpos_8h.html", "set__endpos_8h" ],
-    [ "shutter_pct.h", "shutter__pct_8h.html", null ],
-    [ "shutter_prefs.h", "shutter__prefs_8h.html", "shutter__prefs_8h" ],
-    [ "so_msg.h", "so__msg_8h_source.html", null ],
-    [ "timer_data.h", "timer__data_8h.html", [
-      [ "Fer_TimerData", "structFer__TimerData.html", "structFer__TimerData" ]
-    ] ]
+    [ "fernotron_app", "dir_2e4705fb645cf9b2e438d5714597bd14.html", "dir_2e4705fb645cf9b2e438d5714597bd14" ],
+    [ "fernotron_trx", "dir_19c46a59b9d461724b1e6a373b3f8aa6.html", "dir_19c46a59b9d461724b1e6a373b3f8aa6" ],
+    [ "fernotron_uout", "dir_16c368af73f3e730f6665bef6a73a21b.html", "dir_16c368af73f3e730f6665bef6a73a21b" ]
 ];

@@ -1,8 +1,8 @@
-<map id="gm_set.hh" name="gm_set.hh">
-<area shape="rect" id="node1" title="Provide set of groups/members with iterator." alt="" coords="280,5,371,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,181,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="206,80,266,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="290,80,361,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="385,80,455,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="479,80,643,107"/>
+<map id="fernotron_app/include/fernotron/gm_set.hh" name="fernotron_app/include/fernotron/gm_set.hh">
+<area shape="rect" id="node1" title="Provide set of groups/members with iterator." alt="" coords="243,5,407,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,181,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="206,95,266,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="290,95,361,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="385,95,455,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="479,95,643,121"/>
 </map>

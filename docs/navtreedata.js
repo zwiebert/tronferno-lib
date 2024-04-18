@@ -24,13 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "components-mcu", "index.html", [
-    [ "tronferno-mcu", "index.html", [
-      [ "Related Repositories", "index.html#autotoc_md1", [
-        [ "History", "index.html#autotoc_md2", null ],
-        [ "Project Author", "index.html#autotoc_md3", null ]
-      ] ]
-    ] ],
+  [ "tronferno-lib", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -60,10 +54,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"fer__msg__attachment__enum_8h.html#a7989d1cf941e2a952795c1c69e464bc6a9e186da470ab4095decf874cdbe825c7",
-"fer__trx__c__api_8h.html#aa5fcb698bd334af45a24dc29a4859fae",
-"positions__dynamic_8h.html#a61f7f4023c8447bab9bb46bf2d59e59e",
-"unionfer__sbT.html#a9adec8d6e005ac4a8d1f597b5411e96c"
+"fer__msg__attachment__enum_8h.html#a69d63dac6c2f7e9e2fee8468ab07106ea8687ece8ea739253a15a3b777ede4255",
+"fer__trx__c__api_8h.html#a660a0cd55bd5326495352aae546ebabaa3be8449ffa9902d82617a9390c3d940a",
+"structfer__rtc__sd.html#a10266f0d70faa3ae527b8c31831735ec"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

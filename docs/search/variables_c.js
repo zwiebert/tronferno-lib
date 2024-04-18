@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['sd_830',['sd',['../unionfer__sbT.html#a9adec8d6e005ac4a8d1f597b5411e96c',1,'fer_sbT::sd()'],['../unionfer__rtc.html#a9d894ca02d675ec7a5bb044a850a1b03',1,'fer_rtc::sd()'],['../unionfer__astro__row.html#ab3a71a3d08f57381701f3c0d74df6e9b',1,'fer_astro_row::sd()'],['../unionfer__cmd__row.html#a3c240b8d88ce7ca83320ee6e72ec7284',1,'fer_cmd_row::sd()']]],
-  ['secs_831',['secs',['../structfer__rtc__sd.html#a994cc4c75f4d54bdcf01bc9c242f2d8a',1,'fer_rtc_sd']]],
-  ['stopdelay_832',['stopDelay',['../structFer__MsgCmd.html#a79d2aecab9e75e190edac9418ec52074',1,'Fer_MsgCmd']]],
-  ['sunauto_833',['sunAuto',['../structfer__rtc__sd.html#a7c9c0950401b564eb6b6a6bb818363dc',1,'fer_rtc_sd']]]
+  ['td_829',['td',['../structFer__MsgTimer.html#a88d9f4e74d61f1f037264abc36c5531d',1,'Fer_MsgTimer']]],
+  ['tgl_830',['tgl',['../structFer__Cmd.html#af7a24d5a5af50a9e90fd8edb1a52d3d7',1,'Fer_Cmd']]],
+  ['timeout_831',['timeout',['../structso__arg__pras__t.html#a23f159bde3c349ae28e69acb54221963',1,'so_arg_pras_t::timeout()'],['../structso__arg__cuas__t.html#ac39a8211f61584fdff56537a7a2fb5b2',1,'so_arg_cuas_t::timeout()']]],
+  ['timers_832',['timers',['../structfer__timer__row.html#a4fec84ef342c64445051a44375ef6bc2',1,'fer_timer_row']]],
+  ['times_833',['times',['../unionfer__astro__row.html#a6e38de6ba604578f66982e6bacd15c79',1,'fer_astro_row']]]
 ];

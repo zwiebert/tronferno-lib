@@ -1,10 +1,10 @@
-<map id="timer_data.h" name="timer_data.h">
-<area shape="rect" id="node1" title="vocabulary types to program Fernotron automatic (timers)" alt="" coords="285,5,391,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,87,76,114"/>
-<area shape="rect" id="node3" title=" " alt="" coords="101,87,183,114"/>
-<area shape="rect" id="node4" title=" " alt="" coords="208,87,279,114"/>
-<area shape="rect" id="node5" title=" " alt="" coords="303,87,373,114"/>
-<area shape="rect" id="node6" title=" " alt="" coords="398,87,465,114"/>
-<area shape="rect" id="node7" title=" " alt="" coords="489,80,625,121"/>
-<area shape="rect" id="node8" title=" " alt="" coords="649,87,752,114"/>
+<map id="fernotron_trx/include/fernotron_trx/timer_data.h" name="fernotron_trx/include/fernotron_trx/timer_data.h">
+<area shape="rect" id="node1" title="vocabulary types to program Fernotron automatic (timers)" alt="" coords="259,5,417,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,117,76,143"/>
+<area shape="rect" id="node3" title=" " alt="" coords="101,117,183,143"/>
+<area shape="rect" id="node4" title=" " alt="" coords="208,117,279,143"/>
+<area shape="rect" id="node5" title=" " alt="" coords="303,117,373,143"/>
+<area shape="rect" id="node6" title=" " alt="" coords="398,117,465,143"/>
+<area shape="rect" id="node7" title=" " alt="" coords="489,109,625,151"/>
+<area shape="rect" id="node8" title=" " alt="" coords="649,117,752,143"/>
 </map>

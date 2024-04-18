@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['otok_863',['otok',['../options_8hh.html#afc82ec8561e4f5a8c1fc53544d9bf6f5',1,'options.hh']]]
+  ['rftrx_858',['rfTrx',['../fer__radio__trx_8h.html#a413685cb58a5c455f8c8885512330e2e',1,'fer_radio_trx.h']]]
 ];

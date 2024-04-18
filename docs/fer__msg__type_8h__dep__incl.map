@@ -1,13 +1,13 @@
-<map id="fer_msg_type.h" name="fer_msg_type.h">
-<area shape="rect" id="node1" title="kinds of messages" alt="" coords="172,5,295,32"/>
-<area shape="rect" id="node2" href="$fer__msg__plain_8h.html" title="Data structure of plain messages or header of extended messages." alt="" coords="170,80,297,107"/>
-<area shape="rect" id="node3" href="$commands_8h.html" title="commands to move or stop a shutter with position support" alt="" coords="5,155,112,181"/>
-<area shape="rect" id="node4" href="$repeater_8h_source.html" title=" " alt="" coords="136,155,224,181"/>
-<area shape="rect" id="node5" href="$fer__fsb_8h.html" title="Plain raw message." alt="" coords="249,155,327,181"/>
-<area shape="rect" id="node8" href="$fer__msg__attachment_8h.html" title="Extended messages." alt="" coords="351,155,521,181"/>
-<area shape="rect" id="node6" href="$fer__msg__tx_8h.html" title="Send raw messages." alt="" coords="83,229,189,256"/>
-<area shape="rect" id="node7" href="$fer__rawmsg__build_8h.html" title="builder functions to construct (extended) raw messages" alt="" coords="214,229,365,256"/>
-<area shape="rect" id="node9" href="$fer__print_8h.html" title="Print raw message as formatted text to standard output (for debug purposes)." alt="" coords="389,229,478,256"/>
-<area shape="rect" id="node10" href="$fer__radio__trx_8h.html" title="RF transceiver." alt="" coords="503,229,620,256"/>
-<area shape="rect" id="node11" href="$fer__rawmsg__buffer_8h.html" title="Global static buffers for raw messages." alt="" coords="644,229,799,256"/>
+<map id="fernotron_trx/include/fernotron_trx/raw/fer_msg_type.h" name="fernotron_trx/include/fernotron_trx/raw/fer_msg_type.h">
+<area shape="rect" id="node1" title="kinds of messages" alt="" coords="373,5,535,61"/>
+<area shape="rect" id="node2" href="$fer__msg__plain_8h.html" title="Data structure of plain messages or header of extended messages." alt="" coords="373,109,535,165"/>
+<area shape="rect" id="node3" href="$commands_8h.html" title="commands to move or stop a shutter with position support" alt="" coords="5,221,207,262"/>
+<area shape="rect" id="node4" href="$repeater_8h_source.html" title=" " alt="" coords="231,221,445,262"/>
+<area shape="rect" id="node5" href="$fer__fsb_8h.html" title="Plain raw message." alt="" coords="470,221,670,262"/>
+<area shape="rect" id="node8" href="$fer__msg__attachment_8h.html" title="Extended messages." alt="" coords="693,213,855,269"/>
+<area shape="rect" id="node6" href="$fer__msg__tx_8h.html" title="Send raw messages." alt="" coords="312,317,473,373"/>
+<area shape="rect" id="node7" href="$fer__rawmsg__build_8h.html" title="builder functions to construct (extended) raw messages" alt="" coords="497,317,659,373"/>
+<area shape="rect" id="node9" href="$fer__print_8h.html" title="Print raw message as formatted text to standard output (for debug purposes)." alt="" coords="683,317,847,373"/>
+<area shape="rect" id="node10" href="$fer__radio__trx_8h.html" title="RF transceiver." alt="" coords="871,317,1032,373"/>
+<area shape="rect" id="node11" href="$fer__rawmsg__buffer_8h.html" title="Global static buffers for raw messages." alt="" coords="1056,317,1217,373"/>
 </map>

@@ -1,16 +1,16 @@
-<map id="positions_dynamic.h" name="positions_dynamic.h">
-<area shape="rect" id="node1" title="Keep track of positions for a currently moving shutter." alt="" coords="425,5,581,32"/>
-<area shape="rect" id="node2" href="$fer__pct_8h.html" title="class Pct to represent shutter opening percentage" alt="" coords="233,177,375,203"/>
-<area shape="rect" id="node6" href="$fer__trx__c__api_8h.html" title="C&#45;API for sending and receiving Fernotron RF messages." alt="" coords="509,80,664,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="206,266,277,293"/>
-<area shape="rect" id="node4" title=" " alt="" coords="301,266,384,293"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,266,181,293"/>
-<area shape="rect" id="node7" title=" " alt="" coords="595,177,759,203"/>
-<area shape="rect" id="node8" href="$timer__data_8h.html" title="vocabulary types to program Fernotron automatic (timers)" alt="" coords="424,169,571,211"/>
-<area shape="rect" id="node14" title=" " alt="" coords="784,177,848,203"/>
-<area shape="rect" id="node9" title=" " alt="" coords="535,266,606,293"/>
-<area shape="rect" id="node10" title=" " alt="" coords="630,266,701,293"/>
-<area shape="rect" id="node11" title=" " alt="" coords="725,266,792,293"/>
-<area shape="rect" id="node12" title=" " alt="" coords="816,259,952,300"/>
-<area shape="rect" id="node13" title=" " alt="" coords="409,266,511,293"/>
+<map id="fernotron_app/include/fernotron/pos/positions_dynamic.h" name="fernotron_app/include/fernotron/pos/positions_dynamic.h">
+<area shape="rect" id="node1" title="Keep track of positions for a currently moving shutter." alt="" coords="415,5,591,61"/>
+<area shape="rect" id="node2" href="$fer__pct_8h.html" title="class Pct to represent shutter opening percentage" alt="" coords="233,206,375,233"/>
+<area shape="rect" id="node6" href="$fer__trx__c__api_8h.html" title="C&#45;API for sending and receiving Fernotron RF messages." alt="" coords="509,109,664,151"/>
+<area shape="rect" id="node3" title=" " alt="" coords="206,295,277,322"/>
+<area shape="rect" id="node4" title=" " alt="" coords="301,295,384,322"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,295,181,322"/>
+<area shape="rect" id="node7" title=" " alt="" coords="595,206,759,233"/>
+<area shape="rect" id="node8" href="$timer__data_8h.html" title="vocabulary types to program Fernotron automatic (timers)" alt="" coords="424,199,571,240"/>
+<area shape="rect" id="node14" title=" " alt="" coords="784,206,848,233"/>
+<area shape="rect" id="node9" title=" " alt="" coords="535,295,606,322"/>
+<area shape="rect" id="node10" title=" " alt="" coords="630,295,701,322"/>
+<area shape="rect" id="node11" title=" " alt="" coords="725,295,792,322"/>
+<area shape="rect" id="node12" title=" " alt="" coords="816,288,952,329"/>
+<area shape="rect" id="node13" title=" " alt="" coords="409,295,511,322"/>
 </map>

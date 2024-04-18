@@ -1,5 +1,9 @@
 var annotated_dup =
 [
+    [ "Documentation", "index.html#autotoc_md1", null ],
+    [ "Related Repositories", "index.html#autotoc_md2", null ],
+    [ "History", "index.html#autotoc_md3", null ],
+    [ "Project Author", "index.html#autotoc_md4", null ],
     [ "cfg_astro", "structcfg__astro.html", "structcfg__astro" ],
     [ "fer_astro", "unionfer__astro.html", "unionfer__astro" ],
     [ "fer_astro_row", "unionfer__astro__row.html", "unionfer__astro__row" ],

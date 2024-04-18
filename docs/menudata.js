@@ -87,15 +87,13 @@ var menudata={children:[
 {text:"b",url:"globals_b.html#index_b"},
 {text:"f",url:"globals_f.html#index_f"},
 {text:"m",url:"globals_m.html#index_m"},
-{text:"o",url:"globals_o.html#index_o"},
 {text:"r",url:"globals_r.html#index_r"}]},
 {text:"Functions",url:"globals_func.html",children:[
 {text:"a",url:"globals_func.html#index_a"},
 {text:"f",url:"globals_func.html#index_f"}]},
 {text:"Variables",url:"globals_vars.html",children:[
 {text:"b",url:"globals_vars.html#index_b"},
-{text:"f",url:"globals_vars.html#index_f"},
-{text:"o",url:"globals_vars.html#index_o"}]},
+{text:"f",url:"globals_vars.html#index_f"}]},
 {text:"Typedefs",url:"globals_type.html"},
 {text:"Enumerations",url:"globals_enum.html"},
 {text:"Enumerator",url:"globals_eval.html",children:[

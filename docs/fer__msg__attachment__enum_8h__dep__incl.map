@@ -1,8 +1,8 @@
-<map id="fer_msg_attachment_enum.h" name="fer_msg_attachment_enum.h">
-<area shape="rect" id="node1" title="Enums for extended messages." alt="" coords="179,5,337,47"/>
-<area shape="rect" id="node2" href="$fer__msg__attachment_8h.html" title="Extended messages." alt="" coords="173,95,343,121"/>
-<area shape="rect" id="node3" href="$fer__print_8h.html" title="Print raw message as formatted text to standard output (for debug purposes)." alt="" coords="5,169,95,196"/>
-<area shape="rect" id="node4" href="$fer__radio__trx_8h.html" title="RF transceiver." alt="" coords="119,169,237,196"/>
-<area shape="rect" id="node5" href="$fer__rawmsg__buffer_8h.html" title="Global static buffers for raw messages." alt="" coords="261,169,415,196"/>
-<area shape="rect" id="node6" href="$fer__rawmsg__build_8h.html" title="builder functions to construct (extended) raw messages" alt="" coords="440,169,591,196"/>
+<map id="fernotron_trx/include/fernotron_trx/raw/fer_msg_attachment_enum.h" name="fernotron_trx/include/fernotron_trx/raw/fer_msg_attachment_enum.h">
+<area shape="rect" id="node1" title="Enums for extended messages." alt="" coords="269,5,463,61"/>
+<area shape="rect" id="node2" href="$fer__msg__attachment_8h.html" title="Extended messages." alt="" coords="285,109,447,165"/>
+<area shape="rect" id="node3" href="$fer__print_8h.html" title="Print raw message as formatted text to standard output (for debug purposes)." alt="" coords="5,213,169,269"/>
+<area shape="rect" id="node4" href="$fer__radio__trx_8h.html" title="RF transceiver." alt="" coords="193,213,355,269"/>
+<area shape="rect" id="node5" href="$fer__rawmsg__buffer_8h.html" title="Global static buffers for raw messages." alt="" coords="379,213,540,269"/>
+<area shape="rect" id="node6" href="$fer__rawmsg__build_8h.html" title="builder functions to construct (extended) raw messages" alt="" coords="564,213,725,269"/>
 </map>

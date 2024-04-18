@@ -1,9 +1,9 @@
-<map id="fer_main.h" name="fer_main.h">
-<area shape="rect" id="node1" title="Component settings." alt="" coords="140,5,232,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,155,76,181"/>
-<area shape="rect" id="node3" href="$gm__set_8hh.html" title="Provide set of groups/members with iterator." alt="" coords="182,80,337,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="101,155,277,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="301,155,361,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="385,155,456,181"/>
-<area shape="rect" id="node7" title=" " alt="" coords="480,155,644,181"/>
+<map id="fernotron_app/include/fernotron/fer_main.h" name="fernotron_app/include/fernotron/fer_main.h">
+<area shape="rect" id="node1" title="Component settings." alt="" coords="104,5,268,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,169,76,196"/>
+<area shape="rect" id="node3" href="$gm__set_8hh.html" title="Provide set of groups/members with iterator." alt="" coords="182,95,337,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="101,169,277,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="301,169,361,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="385,169,456,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="480,169,644,196"/>
 </map>

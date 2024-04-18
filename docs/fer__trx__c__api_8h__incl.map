@@ -1,13 +1,13 @@
-<map id="fer_trx_c_api.h" name="fer_trx_c_api.h">
-<area shape="rect" id="node1" title="C&#45;API for sending and receiving Fernotron RF messages." alt="" coords="279,5,397,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="76,87,240,114"/>
-<area shape="rect" id="node3" href="$timer__data_8h.html" title="vocabulary types to program Fernotron automatic (timers)" alt="" coords="265,80,411,121"/>
-<area shape="rect" id="node11" title=" " alt="" coords="435,87,499,114"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,177,76,203"/>
-<area shape="rect" id="node5" title=" " alt="" coords="101,177,183,203"/>
-<area shape="rect" id="node6" title=" " alt="" coords="208,177,279,203"/>
-<area shape="rect" id="node7" title=" " alt="" coords="303,177,373,203"/>
-<area shape="rect" id="node8" title=" " alt="" coords="398,177,465,203"/>
-<area shape="rect" id="node9" title=" " alt="" coords="489,169,625,211"/>
-<area shape="rect" id="node10" title=" " alt="" coords="649,177,752,203"/>
+<map id="fernotron_trx/include/fernotron_trx/fer_trx_c_api.h" name="fernotron_trx/include/fernotron_trx/fer_trx_c_api.h">
+<area shape="rect" id="node1" title="C&#45;API for sending and receiving Fernotron RF messages." alt="" coords="259,5,417,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="76,117,240,143"/>
+<area shape="rect" id="node3" href="$timer__data_8h.html" title="vocabulary types to program Fernotron automatic (timers)" alt="" coords="265,109,411,151"/>
+<area shape="rect" id="node11" title=" " alt="" coords="435,117,499,143"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,206,76,233"/>
+<area shape="rect" id="node5" title=" " alt="" coords="101,206,183,233"/>
+<area shape="rect" id="node6" title=" " alt="" coords="208,206,279,233"/>
+<area shape="rect" id="node7" title=" " alt="" coords="303,206,373,233"/>
+<area shape="rect" id="node8" title=" " alt="" coords="398,206,465,233"/>
+<area shape="rect" id="node9" title=" " alt="" coords="489,199,625,240"/>
+<area shape="rect" id="node10" title=" " alt="" coords="649,206,752,233"/>
 </map>
