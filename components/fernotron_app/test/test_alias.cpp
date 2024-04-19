@@ -10,8 +10,18 @@
 #include <test_runner.h>
 #endif
 #include "fernotron/alias/pairings.h"
-#include "txtio/inout.h"
 #include <string.h>
+
+#include <debug/log.h>
+#ifdef CONFIG_FERNOTRON_APP_DEBUG
+#define DEBUG
+#define DT(x) x
+#define D(x) x
+#else
+#define DT(x)
+#define D(x)
+#endif
+#define logtag "ferno.app"
 
 #define A 0x101234
 static Fer_GmSet gm, gme;

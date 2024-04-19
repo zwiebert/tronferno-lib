@@ -12,7 +12,6 @@
 
 #include "fernotron/fer_main.h"
 #include <fernotron_trx/fer_trx_api.hh>
-#include "txtio/inout.h"
 #include "debug/dbg.h"
 
 #define GRP_MAX 7
@@ -46,7 +45,6 @@ bool fer_cmd_moveShutterToPct(uint32_t a, uint8_t g, uint8_t m, uint8_t pct_arg,
 
   if (is_our_cu && g > 0 && m > 0) {
     curr_pct = fer_statPos_getPct(g, m);
-    io_printf_v(vrbDebug, "curr_pct: %d\n", curr_pct.value());
   }
 
 

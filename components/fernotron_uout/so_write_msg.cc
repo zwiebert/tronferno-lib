@@ -10,8 +10,6 @@
 #include "fernotron_uout/fer_uo_publish.h"
 #include "fernotron/gm_set.hh"
 #include "utils_misc/int_types.h"
-
-#include "txtio/inout.h"
 #include "uout/uout_builder_json.hh"
 #include "uout/uout_builder_plaintext.hh"
 

@@ -17,4 +17,6 @@
 void fer_msg_print(const char *tag, const fer_rawMsg *msg, fer_msg_kindT t, bool verbose);
 void fer_msg_print_as_cmdline(const char *tag, const fer_rawMsg *msg, fer_msg_kindT t);
 
+#include <utils_misc/int_types.h>
+extern enum verbosity fer_verbosity;
 

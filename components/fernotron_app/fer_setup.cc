@@ -17,8 +17,12 @@
 #include <fernotron_trx/fer_trx_api.hh>
 #include <fernotron_uout/fer_uo_publish.h>
 #include <fernotron/repeater/repeater.h>
-#include "txtio/inout.h"
+#include <utils_misc/int_types.h>
 #include <string.h>
+#include <stdint.h>
+
+enum verbosity fer_verbosity;
+#define is_verbose(lvl) (fer_verbosity >= (lvl))
 
 struct fer_configT fer_config;
 Fer_GmSet manual_bits, fer_usedMemberMask;
@@ -48,7 +52,7 @@ public:
     const fer_rawMsg *fer_rx_msg = static_cast<const fer_rawMsg*>(get_raw());
 
     if (msg_type == MSG_TYPE_PLAIN || msg_type == MSG_TYPE_PLAIN_DOUBLE) {
-      fer_msg_print("R:", fer_rx_msg, msg_type, TXTIO_IS_VERBOSE(vrbDebug));
+      fer_msg_print("R:", fer_rx_msg, msg_type, is_verbose(vrbDebug));
      // fer_msg_print_as_cmdline((msg_type == MSG_TYPE_PLAIN_DOUBLE ? "Rc:" : "RC:"), fer_rx_msg, msg_type);
 #ifdef CONFIG_APP_USE_REPEATER
       ferRep_repeatCommand(fer_rx_msg->cmd.sd.cmd);
@@ -57,7 +61,7 @@ public:
 
 #ifndef FER_RECEIVER_MINIMAL
     if (msg_type == MSG_TYPE_RTC || msg_type == MSG_TYPE_TIMER) {
-      fer_msg_print("timer frame received\n", fer_rx_msg, msg_type, TXTIO_IS_VERBOSE(vrbDebug));
+      fer_msg_print("timer frame received\n", fer_rx_msg, msg_type, is_verbose(vrbDebug));
     }
 
     if (msg_type == MSG_TYPE_RTC) {
@@ -70,11 +74,11 @@ public:
 #endif
 
 #ifdef CONFIG_APP_USE_FER_RECEIVER
-    if (TXTIO_IS_VERBOSE(vrbDebug)) {
+    if (is_verbose(vrbDebug)) {
       struct fer_rx_quality q;
       fer_rx_getQuality(&q);
       if (q.bad_pair_count)
-        io_printf("RI:bad_word_pairs: %d\n", q.bad_pair_count);
+        fprintf(stderr, "RI:bad_word_pairs: %d\n", q.bad_pair_count);
     }
 #endif
   }
@@ -102,9 +106,9 @@ public:
     }
 
 
-    if (TXTIO_IS_VERBOSE(vrb1)) {
-      auto t = TXTIO_IS_VERBOSE(vrb2) ? msg_type : fer_msg_kindT::MSG_TYPE_PLAIN;
-      fer_msg_print("S:", fer_tx_msg, t, TXTIO_IS_VERBOSE(vrbDebug));
+    if (is_verbose(vrb1)) {
+      auto t = is_verbose(vrb2) ? msg_type : fer_msg_kindT::MSG_TYPE_PLAIN;
+      fer_msg_print("S:", fer_tx_msg, t, is_verbose(vrbDebug));
       fer_msg_print_as_cmdline("SC:", fer_tx_msg, t);
     }
   }

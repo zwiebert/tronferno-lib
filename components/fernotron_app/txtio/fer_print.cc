@@ -3,19 +3,55 @@
 #include "fernotron_trx/raw/fer_fsb.h"
 #include "fernotron_trx/raw/fer_msg_attachment.h"
 #include "utils_misc/int_macros.h"
-#include "txtio/inout.h"
-#include "txtio/txtio_mutex.hh"
 #include <fernotron_trx/fer_trx_c_api.h>
 #include <fernotron_trx/fer_trx_api.hh>
 
+static void
+io_putd(int n) {
+  printf("%d", n);
+}
+
+static void
+printBCD(uint8_t bcd) {
+  printf("%x%x", GET_HIGH_NIBBLE(bcd), GET_LOW_NIBBLE(bcd));
+}
+#define io_puts(s)  fputs((s), stdout)
+#define io_putlf()  fputs("\r\n", stdout)
+#include <utils_misc/itoa.h>
+static void
+io_print_hex(uint32_t n, bool prefix) {
+  char s[10];
+  ltoa(n, s, 16);
+  if (prefix)
+    io_puts("0x");
+  io_puts(s);
+}
+
+static void
+io_print_hex_8(uint8_t n, bool comma) {
+  char s[3];
+  itoa(n, s, 16);
+  io_puts((n & 0xF0) ? "0x" : "0x0");
+  io_puts(s);
+  if (comma)
+    io_puts(", ");
+}
+
+static void
+print_array_8(const uint8_t *src, int len) {
+  int i;
+
+  for (i = 0; i < len; ++i) {
+    io_print_hex_8(src[i], true);
+  }
+  io_putlf();
+}
 
 // diagnostic output
 static void frb_printPacket(const union fer_cmd_row *cmd);
 static void fpr_printPrgPacketInfo(uint8_t d[FER_PRG_PACK_CT][FER_PRG_BYTE_CT], bool rtc_only);
 
 static void frb_printPacket(const union fer_cmd_row *cmd) {
-  LockGuard lock(txtio_mutex);
-
   int i;
 
   for (i = 0; i < FER_CMD_BYTE_CT; ++i) {
@@ -26,16 +62,12 @@ static void frb_printPacket(const union fer_cmd_row *cmd) {
 
 static void
 printTimerStamp(uint8_t d[18][9], int row, int col) {
-  LockGuard lock(txtio_mutex);
-
   printBCD(d[row][col+1]);
   io_puts(":");
   printBCD(d[row][col]);
 }
 
 static void  fpr_printPrgPacketInfo(uint8_t d[FER_PRG_PACK_CT][FER_PRG_BYTE_CT], bool rtc_only) {
-  LockGuard lock(txtio_mutex);
-
   int row, col;
 
 const char *wdays[] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
@@ -96,8 +128,6 @@ const char *wdays[] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
 typedef uint8_t(*fer_msg_data)[FER_PRG_BYTE_CT];
 
 void  fer_msg_print(const char *tag, const fer_rawMsg *msg, fer_msg_kindT t, bool verbose) {
-  LockGuard lock(txtio_mutex);
-
   io_puts(tag);
   frb_printPacket(&msg->cmd);
 
@@ -120,7 +150,6 @@ void  fer_msg_print(const char *tag, const fer_rawMsg *msg, fer_msg_kindT t, boo
 }
 
 void  fer_msg_print_as_cmdline(const char *tag, const fer_rawMsg *msg, fer_msg_kindT t) {
-  LockGuard lock(txtio_mutex);
 
   const fer_sbT *fsb = (fer_sbT*) msg;
 

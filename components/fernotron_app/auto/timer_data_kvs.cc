@@ -10,19 +10,12 @@
 #include "kvs/kvs_wrapper.h"
 #include "utils_misc/int_types.h"
 #include "debug/dbg.h"
-#include "txtio/inout.h"
 #include <alloca.h>
 #include <string.h>
 
-#ifndef TEST_HOST
-#define DB(x) do { if (TXTIO_IS_VERBOSE(vrbDebug)) { x; } } while(0)
-#define DB2(x) DB(x)
-#else
 #include <stdio.h>
-#define DB(x) x
+#define DB(x)
 #define DB2(x)
-#endif
-
 
 
 ////////////////// private ///////////////////////////////////////////////////////////////

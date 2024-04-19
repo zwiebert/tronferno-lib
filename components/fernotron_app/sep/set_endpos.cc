@@ -3,10 +3,8 @@
 #include "fernotron_trx/fer_trx_api.hh"
 #include "fernotron_uout/fer_uo_publish.h"
 #include <fernotron_trx/fer_trx_c_api.h>
-//#include "gpio/pin.h"
 
 #include <utils_time/time_out_secs.hh>
-#include "txtio/inout.h"
 
 #include "sep.hh"
 
@@ -18,7 +16,7 @@
 #define DT(x)
 #define D(x)
 #endif
-#define logtag "ferno.app.pos"
+#define logtag "ferno.app"
 
 void (*fer_sep_enable_disable_cb)(bool enable);
 
