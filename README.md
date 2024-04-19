@@ -9,13 +9,9 @@
    * see make help for more
    
 #### Related Repositories
-
  * [tronferno-lib](https://github.com/zwiebert/tronferno-lib): This repository
-
  * [tronferno-mcu-bin](https://github.com/zwiebert/tronferno-mcu-bin): Firmware binaries, tools and docs for end users
-
  * [tronferno-mcu](https://github.com/zwiebert/tronferno-mcu) Source distribution for developers
-
  * [tronferno-fhem](https://github.com/zwiebert/tronferno-fhem): Perl module for integration into home server FHEM
 
 
