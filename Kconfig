@@ -1,5 +1,3 @@
 rsource "components/fernotron_trx/Kconfig"
 rsource "components/fernotron_app/Kconfig"
 rsource "components/fernotron_uout/Kconfig"
-
-rsource "external/components-misc/Kconfig.projbuild"
