@@ -1,7 +1,4 @@
 #include <unity.h>
-#ifdef TEST_HOST
-#include <test_runner.h>
-#endif
 #include "fernotron_trx/raw/fer_msg_tx.h"
 #include <fernotron_trx/fer_trx_api.hh>
 #include <fernotron_trx/timer_data.h>
@@ -64,14 +61,16 @@ void test_put_daily() {
 }
 
 
+int main() {
+  UNITY_BEGIN();
 
-TEST_CASE("tx: repeats and queue", "[fernotron]")
-{
-  test_put_weekly();
-  test_put_daily();
+  RUN_TEST(test_put_weekly);
+  RUN_TEST(test_put_daily);
+
+  return UNITY_END();
 }
 
-#ifdef TEST_HOST
+
 //volatile bool fer_tx_messageToSend_isReady;
 //volatile uint32_t run_time_s_;
 //volatile uint32_t run_time_ts_;
@@ -79,4 +78,3 @@ uint32_t run_time_ts() { return 0; }
 uint32_t run_time_s() { return 0; }
 bool mcu_get_rxPin() { return false; }
 void mcu_delay_us(uint32_t us) {}
-#endif

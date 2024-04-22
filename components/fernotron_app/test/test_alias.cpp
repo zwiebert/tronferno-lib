@@ -6,9 +6,6 @@
  */
 
 #include <unity.h>
-#ifdef TEST_HOST
-#include <test_runner.h>
-#endif
 #include "fernotron/alias/pairings.h"
 #include <string.h>
 
@@ -73,9 +70,12 @@ static void test_pair_multiple_members() {
 
 
 
-TEST_CASE("pair multiple members", "[fernotron/alias]")
-{
-  test_pair_multiple_members();
+int main() {
+  UNITY_BEGIN();
+
+  RUN_TEST(test_pair_multiple_members);
+
+  return UNITY_END();
 }
 
 

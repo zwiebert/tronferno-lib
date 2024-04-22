@@ -5,10 +5,7 @@
  *      Author: bertw
  */
 #include <unity.h>
-#ifdef TEST_HOST
-#include <test_runner.h>
 #include <sys/random.h>
-#endif
 
 #include <fernotron_trx/raw/fer_msg_plain.h>
 #include "fernotron_trx/astro.h"
@@ -166,38 +163,31 @@ static void test_ferMsg_modData_andVerifyCS() {
   --test_msg.cmd.bd[3];
 }
 
-TEST_CASE("fer_msg struct size", "[fernotron]")
-{
-  test_ferMsg_size();
-}
 
-TEST_CASE("fer_msg verify checksums", "[fernotron]")
-{
-  test_ferMsg_verifyChecksums();
-}
-TEST_CASE("fer_msg write checksums and verify", "[fernotron]")
-{
-  test_ferMsg_writeChecksums();
-  test_ferMsg_verifyChecksums();
-}
-TEST_CASE("fer_msg write data/checksums and verify", "[fernotron]")
-{
-  test_ferMsg_writeData();
-  test_ferMsg_writeChecksums();
-  test_ferMsg_verifyChecksums();
-}
-
-TEST_CASE("fer_msg modify data and verify checksums", "[fernotron]")
-{
-  test_ferMsg_modData_andVerifyCS();
-}
-
-TEST_CASE("fer_msg write/verify rtc_msg", "[fernotron]")
+void test_write_verify()
 {
   tst_ferMsg_writeRtc_andVerify();
   for (int i=0; i < 100; ++i)
     tst_ferMsg_writeRtc_andVerify_random();
 }
+
+int main() {
+  UNITY_BEGIN();
+
+  RUN_TEST(test_ferMsg_size);
+  RUN_TEST(test_ferMsg_verifyChecksums);
+  RUN_TEST(test_ferMsg_writeChecksums);
+  RUN_TEST(test_ferMsg_verifyChecksums);
+  RUN_TEST(test_ferMsg_writeData);
+  RUN_TEST(test_ferMsg_writeChecksums);
+  RUN_TEST(test_ferMsg_verifyChecksums);
+  RUN_TEST(test_ferMsg_modData_andVerifyCS);
+  RUN_TEST(test_write_verify);
+
+  return UNITY_END();
+}
+
+
 
 
 #ifdef TEST_HOST

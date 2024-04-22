@@ -6,15 +6,12 @@
 #include "../pos/pos_map.hh"
 
 #include <unity.h>
-#ifdef TEST_HOST
-#include <test_runner.h>
 #include <stdint.h>
 #include <unistd.h>
 #include <iostream>
 
 #include <utils_time/ut_sleep.h>
 #define sleep(s) ut_sleep(s)
-#endif
 
 void tst_posMap_1() {
   Fer_Pos_Map pm;
@@ -59,6 +56,12 @@ void tst_posMap_1() {
 
 
 
-TEST_CASE("pos_map_1", "[fernotron/pos]") {
-  tst_posMap_1();
+int main() {
+  UNITY_BEGIN();
+
+  RUN_TEST(tst_posMap_1);
+
+  return UNITY_END();
 }
+
+

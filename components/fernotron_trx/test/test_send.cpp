@@ -1,7 +1,4 @@
 #include <unity.h>
-#ifdef TEST_HOST
-#include <test_runner.h>
-#endif
 #include <fernotron_trx/fer_trx_api.hh>
 #include "fernotron_trx/raw/fer_msg_tx.h"
 
@@ -49,16 +46,13 @@ void test_send() {
 }
 
 
+int main() {
+  UNITY_BEGIN();
 
+  RUN_TEST(test_send);
 
-
-TEST_CASE("send fernotron message", "[fernotron]")
-{
-
-   test_send();
+  return UNITY_END();
 }
-
-
 
 
 

@@ -6,9 +6,6 @@
  */
 
 #include <unity.h>
-#ifdef TEST_HOST
-#include <test_runner.h>
-#endif
 
 #include <fernotron_trx/raw/fer_msg_plain.h>
 #include "fernotron_trx/astro.h"
@@ -35,11 +32,21 @@ static void test_indexes() {
   TEST_ASSERT_EQUAL(29, test_get_index(4, 17));
 }
 
-TEST_CASE("astro", "[app]")
-{
+
+int main() {
+  UNITY_BEGIN();
+
   struct cfg_astro  cfg = { acAverage, 13.38, 52.52, +1.0 };
   fer_astro_init_and_reinit(&cfg);
-  //test_astro();
-  test_indexes();
+
+  //RUN_TEST(test_astro);
+  RUN_TEST(test_indexes);
+
+  return UNITY_END();
 }
+
+
+
+
+
 

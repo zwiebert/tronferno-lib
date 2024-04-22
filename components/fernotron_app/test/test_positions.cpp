@@ -12,15 +12,12 @@
 #include <utils_time/run_time.h>
 
 #include <unity.h>
-#ifdef TEST_HOST
-#include <test_runner.h>
 #include <stdint.h>
 #include <unistd.h>
 #include <iostream>
 
 #include <utils_time/ut_sleep.h>
 #define sleep(s) ut_sleep(s)
-#endif
 
 
 
@@ -119,26 +116,18 @@ void tst_dynamicPos_stop() {
 }
 
 
-TEST_CASE("dynamic_positions_stop", "[fernotron/pos]") {
- tst_dynamicPos_stop();
+int main() {
+  UNITY_BEGIN();
+
+  RUN_TEST(tst_dynamicPos_stop);
+  RUN_TEST(test_set_get_pct);
+  RUN_TEST(tst_dynamicPos);
+
+  return UNITY_END();
 }
 
-
-TEST_CASE("set/get pct", "[fernotron/pos]") {
- test_set_get_pct();
-}
-
-
-TEST_CASE("dynamic_positions", "[fernotron/pos]") {
- tst_dynamicPos();
-}
-
-
-
-#ifdef TEST_HOST
 
 void setUp() {
   fer_main_setup({0x801234, ~0U});
 }
 
-#endif

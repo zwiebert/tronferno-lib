@@ -5,9 +5,6 @@
  *      Author: bertw
  */
 #include <unity.h>
-#ifdef TEST_HOST
-#include <test_runner.h>
-#endif
 #include "fernotron/auto/fau_tdata_store.h"
 #include "../include/fernotron/auto/fau_tevent.hh"
 #include "fernotron_trx/astro.h"
@@ -416,21 +413,21 @@ static void test_timer_minutes() {
 
 }
 
+int main() {
+  UNITY_BEGIN();
 
-TEST_CASE("calculate timer minutes", "[fernotron/auto]") {
+  RUN_TEST(test_timer_minutes);
 
-  test_timer_minutes();
+  RUN_TEST(test_timer_event);
+  RUN_TEST(test_timer_event2);
+  RUN_TEST(test_timer_event3);
+  RUN_TEST(test_timer_event4);
+  RUN_TEST(test_timer_event5);
+
+  return UNITY_END();
 }
 
-TEST_CASE("timer next event", "[fernotron/auto]") {
-  test_timer_event();
-  test_timer_event2();
-  test_timer_event3();
-  test_timer_event4();
-  test_timer_event5();
-}
 
-#ifdef TEST_HOST
 #include "fernotron/fer_main.h"
 
 static struct cfg_astro cfg_astro =
@@ -440,9 +437,6 @@ void setUp() {
   fer_main_setup({0x801234, ~0U});
   Fer_Trx_API::setup_astro(&cfg_astro);
 }
-#endif
-
-#ifdef TEST_HOST
 
 #include "time.h"
 
@@ -455,5 +449,4 @@ uint32_t run_time_s() {
   return c / CLOCKS_PER_SEC;
 }
 
-#endif
 

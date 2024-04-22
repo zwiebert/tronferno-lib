@@ -6,9 +6,6 @@
  */
 
 #include <unity.h>
-#ifdef TEST_HOST
-#include <test_runner.h>
-#endif
 #include "fernotron/auto/fau_tdata_store.h"
 #include "fernotron/auto/fau_tminutes.h"
 #include "fernotron_trx/astro.h"
@@ -46,10 +43,13 @@ static void test_save_and_restore() {
 
 }
 
-TEST_CASE("save and restore timer data", "[fernotron/auto]") {
-  test_save_and_restore();
-}
+int main() {
+  UNITY_BEGIN();
 
+  RUN_TEST(test_save_and_restore);
+
+  return UNITY_END();
+}
 #ifdef TEST_HOST
 #include "fernotron/fer_main.h"
 #endif
