@@ -1,7 +1,4 @@
 
-
-
-
 #include "debug/dbg.h"
 #include "fernotron/alias/pairings.h"
 #include "fernotron_trx/astro.h"
@@ -16,7 +13,7 @@
 #include "fernotron/fer_main.h"
 #include <fernotron_trx/fer_trx_api.hh>
 #include <fernotron_uout/fer_uo_publish.h>
-#include <fernotron/repeater/repeater.h>
+#include <fernotron_trx/repeater/repeater.h>
 #include <utils_misc/int_types.h>
 #include <string.h>
 #include <stdint.h>
@@ -27,11 +24,10 @@ enum verbosity fer_verbosity;
 struct fer_configT fer_config;
 Fer_GmSet manual_bits, fer_usedMemberMask;
 
-
 static class FerTrx final : public Fer_Trx_API {
 
 public:
-  virtual void event_plain_message_was_received() {
+  virtual void event_plain_message_was_received() override {
     Fer_MsgPlainCmd msg = get_msg();
     uoApp_publish_fer_msgReceived(&msg);
 
@@ -44,16 +40,16 @@ public:
     }
     fer_simPos_registerMovingShutter(msg.a, msg.g, msg.m, msg.cmd);
   }
-  //virtual void event_plain_double_message_was_received() {  }
-  //virtual void event_rtc_message_was_received() {  }
-  //virtual void event_timer_message_was_received() {  }
-  virtual void event_any_message_was_received() {
+  //virtual void event_plain_double_message_was_received()  override {  }
+  //virtual void event_rtc_message_was_received()  override {  }
+  //virtual void event_timer_message_was_received()  override {  }
+  virtual void event_any_message_was_received() override {
     auto msg_type = get_msgKind();
     const fer_rawMsg *fer_rx_msg = static_cast<const fer_rawMsg*>(get_raw());
 
     if (msg_type == MSG_TYPE_PLAIN || msg_type == MSG_TYPE_PLAIN_DOUBLE) {
       fer_msg_print("R:", fer_rx_msg, msg_type, is_verbose(vrbDebug));
-     // fer_msg_print_as_cmdline((msg_type == MSG_TYPE_PLAIN_DOUBLE ? "Rc:" : "RC:"), fer_rx_msg, msg_type);
+      // fer_msg_print_as_cmdline((msg_type == MSG_TYPE_PLAIN_DOUBLE ? "Rc:" : "RC:"), fer_rx_msg, msg_type);
 #ifdef CONFIG_APP_USE_REPEATER
       ferRep_repeatCommand(fer_rx_msg->cmd.sd.cmd);
 #endif
@@ -85,7 +81,7 @@ public:
 
 public:
 
-  virtual void event_first_message_will_be_sent() { // no repeats
+  virtual void event_first_message_will_be_sent() override { // no repeats
     Fer_MsgPlainCmd msg = get_msg();
     uoApp_publish_fer_msgSent(&msg);
     if (get_a() == fer_config.cu) {
@@ -93,7 +89,7 @@ public:
     }
   }
 
-  virtual void event_any_message_will_be_sent() { // first + repeats
+  virtual void event_any_message_will_be_sent() override { // first + repeats
     auto msg_type = get_msgKind();
     const fer_rawMsg *fer_tx_msg = static_cast<const fer_rawMsg*>(get_raw());
 
@@ -105,7 +101,6 @@ public:
       uoApp_publish_fer_msgAutoSent(plain_msg, *fer_tx_msg);
     }
 
-
     if (is_verbose(vrb1)) {
       auto t = is_verbose(vrb2) ? msg_type : fer_msg_kindT::MSG_TYPE_PLAIN;
       fer_msg_print("S:", fer_tx_msg, t, is_verbose(vrbDebug));
@@ -115,9 +110,6 @@ public:
 
 } MyFerTrx;
 
-
-
-
 uint32_t fer_main_getSenderByAddress(long addr) {
   if (addr == 0) {
     return fer_config.cu;
@@ -125,17 +117,13 @@ uint32_t fer_main_getSenderByAddress(long addr) {
   return addr;
 }
 
-
-
-
-
 void fer_main_setup(const fer_configT &ferConfig, const bool reinit) {
 
-   fer_config = ferConfig;
-   fer_usedMemberMask.fromNibbleCounters(ferConfig.usedMembers);
-   manual_bits = Fer_GmSet(MANUAL_BITS_STORE_NAME);
-   if (reinit)
-     return;
+  fer_config = ferConfig;
+  fer_usedMemberMask.fromNibbleCounters(ferConfig.usedMembers);
+  manual_bits = Fer_GmSet(MANUAL_BITS_STORE_NAME);
+  if (reinit)
+    return;
 
   Fer_Trx_API::setup(&MyFerTrx);
   fer_pos_init();

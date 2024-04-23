@@ -7,7 +7,6 @@ set(srcs
     pos/commands.cc pos/shutter_pct.cc pos/shutter_prefs_kvs.cc pos/move.cc pos/move_start.cc pos/move_stop.cc pos/move_buf.cc
     sep/set_endpos.cc
     sep/auth_button.cc
-    repeater/repeater.cc
     txtio/fer_print.cc
     )
 

@@ -1,11 +1,9 @@
-#include <fernotron/repeater/repeater.h>
-
-
+#include <fernotron_trx/repeater/repeater.h>
 #include <fernotron_trx/fer_trx_api.hh>
 #include <fernotron_trx/raw/fer_msg_plain.h>
 #include <fernotron_trx/raw/fer_msg_tx.h>
 #include <fernotron_trx/raw/fer_fsb.h>
-#include "../fer_msg_tx_queue.h"
+#include "fer_msg_tx_queue.h"
 
 #include <utils_time/run_time.h>
 
