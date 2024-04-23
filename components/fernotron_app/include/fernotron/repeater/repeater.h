@@ -1,5 +1,5 @@
 /*
- * \file   fernotron/repeater/repeater.hh
+ * \file   fernotron/repeater/repeater.h
  * \brief repeat RF commands of specified senders
  */
 

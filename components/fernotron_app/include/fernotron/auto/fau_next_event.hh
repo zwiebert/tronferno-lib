@@ -1,5 +1,5 @@
 /**
- * \file       fernotron/auto/fau_tevent.h
+ * \file       fernotron/auto/fau_next_tevent.hh
  * \brief      Keep track about when the next automatic movement is been scheduled.
  */
 
