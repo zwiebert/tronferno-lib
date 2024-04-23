@@ -1,5 +1,0 @@
-<map id="fernotron_trx/raw/fer_fsb.h" name="fernotron_trx/raw/fer_fsb.h">
-<area shape="rect" id="node1" title="Plain raw message." alt="" coords="96,5,253,47"/>
-<area shape="rect" id="node2" href="$fer__msg__tx_8h.html" title="Send raw messages." alt="" coords="5,95,163,136"/>
-<area shape="rect" id="node3" href="$fer__rawmsg__build_8h.html" title="builder functions to construct (extended) raw messages" alt="" coords="187,95,344,136"/>
-</map>
