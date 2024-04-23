@@ -1,0 +1,15 @@
+<map id="fernotron/auto/fau_tevent.hh" name="fernotron/auto/fau_tevent.hh">
+<area shape="rect" id="node1" title="Keep track about when the next automatic movement is been scheduled." alt="" coords="369,5,509,47"/>
+<area shape="rect" id="node2" href="$fau__tminutes_8h.html" title="Represent when each kind of timer will be scheduled for a given day and g/m. Calculate the next event..." alt="" coords="331,95,451,121"/>
+<area shape="rect" id="node13" title=" " alt="" coords="545,177,609,203"/>
+<area shape="rect" id="node3" href="$fer__pct_8h.html" title="class Pct to represent shutter opening percentage" alt="" coords="135,177,277,203"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,266,76,293"/>
+<area shape="rect" id="node5" title=" " alt="" coords="301,266,383,293"/>
+<area shape="rect" id="node7" href="$timer__data_8h.html" title="vocabulary types to program Fernotron automatic (timers)" alt="" coords="374,169,521,211"/>
+<area shape="rect" id="node6" title=" " alt="" coords="101,266,277,293"/>
+<area shape="rect" id="node8" title=" " alt="" coords="408,266,479,293"/>
+<area shape="rect" id="node9" title=" " alt="" coords="503,266,573,293"/>
+<area shape="rect" id="node10" title=" " alt="" coords="598,266,665,293"/>
+<area shape="rect" id="node11" title=" " alt="" coords="689,259,825,300"/>
+<area shape="rect" id="node12" title=" " alt="" coords="849,266,952,293"/>
+</map>

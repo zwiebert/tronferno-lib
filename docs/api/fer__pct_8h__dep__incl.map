@@ -1,0 +1,11 @@
+<map id="fernotron/fer_pct.h" name="fernotron/fer_pct.h">
+<area shape="rect" id="node1" title="class Pct to represent shutter opening percentage" alt="" coords="303,5,445,32"/>
+<area shape="rect" id="node2" href="$pairings_8h.html" title="Map Fernotron controller 3&#45;byte&#45;addresses to an a/g/m addresses." alt="" coords="5,87,191,114"/>
+<area shape="rect" id="node3" href="$fau__tminutes_8h.html" title="Represent when each kind of timer will be scheduled for a given day and g/m. Calculate the next event..." alt="" coords="215,80,355,121"/>
+<area shape="rect" id="node6" href="$positions__dynamic_8h.html" title="Keep track of positions for a currently moving shutter." alt="" coords="379,80,551,121"/>
+<area shape="rect" id="node9" href="$positions__static_8h.html" title="Store and retrieve shutter positions (persistently)" alt="" coords="575,80,747,121"/>
+<area shape="rect" id="node4" href="$fau__tevent_8hh_source.html" title=" " alt="" coords="215,169,355,211"/>
+<area shape="rect" id="node5" href="$fau__next__event_8hh_source.html" title=" " alt="" coords="215,259,355,300"/>
+<area shape="rect" id="node7" href="$shutter__pct_8h.html" title="include positions_static.h and positions_dynamic.h" alt="" coords="489,169,648,211"/>
+<area shape="rect" id="node8" href="$commands_8h.html" title="commands to move or stop a shutter with position support" alt="" coords="470,266,667,293"/>
+</map>
