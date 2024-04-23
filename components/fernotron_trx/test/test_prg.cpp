@@ -10,8 +10,8 @@
 #include <fernotron_trx/raw/fer_msg_plain.h>
 #include "fernotron_trx/astro.h"
 #include <string.h>
-#include "../fer_app_cfg.h"
-#include "../fer_api.h"
+#include "fer_app_cfg.h"
+#include "fer_api.h"
 #include "debug/dbg.h"
 #include "fernotron_trx/raw/fer_rawmsg_build.h"
 #include <fernotron_trx/fer_trx_api.hh>

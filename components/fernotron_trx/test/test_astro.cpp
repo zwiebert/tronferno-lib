@@ -11,7 +11,7 @@
 #include "fernotron_trx/astro.h"
 #include "utils_misc/sun.h"
 #include <string.h>
-#include "../fer_app_cfg.h"
+#include "fer_app_cfg.h"
 #include "debug/dbg.h"
 #include "fernotron_trx/raw/fer_rawmsg_build.h"
 #include "utils_misc/bcd.h"
