@@ -1,30 +1,41 @@
 #include <fernotron_trx/raw/fer_msg_plain.h>
-#include "fernotron_trx/fer_trx_c_api.h"
-#include "fernotron_trx/raw/fer_radio_trx.h"
+#include <fernotron_trx/fer_trx_c_api.h>
+#include <fernotron_trx/raw/fer_radio_trx.h>
 #include <string.h>
-#include "fer_app_cfg.h"
-#include "fernotron_trx/raw/fer_rawmsg_buffer.h"
-#include "fernotron_trx/raw/fer_rawmsg_build.h"
-#include "fernotron_trx/raw/fer_msg_tx.h"
-#include "debug/dbg.h"
+#include <fer_app_cfg.h>
+#include <fernotron_trx/raw/fer_rawmsg_buffer.h>
+#include <fernotron_trx/raw/fer_rawmsg_build.h>
+#include <fernotron_trx/raw/fer_msg_tx.h>
+#include <debug/dbg.h>
 
-#include "fer_msg_tx_queue.h"
+#include <fer_msg_tx_queue.h>
 #include <fernotron_trx/fer_trx_api.hh>
-#include "fer_trx_incoming_event.hh"
-#include "fer_trx_impl.hh"
-#include "utils_time/run_time.h"
-#include "cc1101_ook/trx.hh"
-#include "main_loop/main_queue.hh"
+#include <fer_trx_incoming_event.hh>
+#include <fer_trx_impl.hh>
+#include <utils_time/run_time.h>
+#include <cc1101_ook/trx.hh>
+#include <main_loop/main_queue.hh>
 
 
 void (*fer_tx_READY_TO_TRANSMIT_cb)(uint32_t when_to_transmit_ts);
 
+/**
+ * \brief          call callback  \ref fer_tx_READY_TO_TRANSMIT_cb and notify user that we are ready to transmit by calling \ref  fer_trx_api_pushEvent_readyToTransmit
+ *
+ *                 this will be called, if there is a message in the send queue
+ * \param time_ts  when the message wants to be send in s/10 since MCU start
+ */
 static inline void fer_tx_ready_to_transmit_cb(uint32_t time_ts) {
   if (fer_tx_READY_TO_TRANSMIT_cb)
     fer_tx_READY_TO_TRANSMIT_cb(time_ts);
   fer_trx_api_pushEvent_readyToTransmit();
 }
 
+/**
+ * \brief if transmitter is not busy and we have a message to send in the queue, then
+ *  1) call \ref fer_tx_ready_to_transmit_cb and 2) initiate a call to \ref fer_tx_loop from main task.
+ *
+ */
 static void fer_send_checkQuedState() {
   struct sf *msg;
 
@@ -139,6 +150,7 @@ extern uint32_t last_rx_ts;
 
 /**
  * \brief Test if receiver is not receiving right now, to avoid RF collision with transmitter.
+ * \return  true if transmitting is possible right now
  */
 inline bool fer_rx_clear_to_send() {
 #ifdef HOST_TESTING
@@ -147,6 +159,14 @@ inline bool fer_rx_clear_to_send() {
   return last_rx_ts + 5 <= run_time_ts(); // TODO: we could use RSSI with CC1101 here. For now just check if nothing was received in the last 500ms
 }
 
+/**
+ * \brief  start or stop periodic timer to call \ref fer_tx_loop
+ *
+ *     if transmitting something new is not possible right now, start the periodic timer and return false
+ *     it transmitting has become possible, then stop timer (if running) and return true
+ *
+ * \return  true if transmitter is ready to send a new message
+ */
 static bool wait_tx_available() {
   static void *tmr;
 
@@ -162,7 +182,12 @@ static bool wait_tx_available() {
   }
   return true;
 }
-
+/**
+ * \brief               start timer which calls \ref fer_tx_loop at the specified time
+ * \param now_ts        the current time in s/10 since MCU start
+ * \param when_ts       time we want to send in s/10 since MCU start
+ * \return              success (starting the timer was successful)
+ */
 static bool wait_tx_when_to_transmit(uint32_t now_ts, uint32_t when_ts) {
   const uint32_t delay_ms = (when_ts - now_ts) * 100;
   static void *tmr;

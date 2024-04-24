@@ -104,7 +104,12 @@ void fer_init_sender(fer_sbT *fsb, uint32_t devID);
 void fer_update_tglNibble(fer_sbT *fsb);
 
 /**
- * \brief    Construct an fer_sbT
+ * \brief      construct fsb
+ * \param a    F. address
+ * \param g    F. group number
+ * \param m    F. receiver number
+ * \param cmd  F. command
+ * \return     fsb containing data from parameters, but no parity and or tgl nibble
  */
 fer_sbT fer_construct_fsb(uint32_t a, uint8_t g, uint8_t m, fer_cmd cmd);
 
