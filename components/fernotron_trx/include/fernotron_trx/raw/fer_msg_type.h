@@ -10,7 +10,7 @@
 typedef enum {
   MSG_TYPE_NONE,  ///< no message
   MSG_TYPE_PLAIN, ///< plain message
-  MSG_TYPE_PLAIN_DOUBLE, ///< plain message received multiple times (received message with unchanged \link Fer_Cmd::tgl \endlink value)
+  MSG_TYPE_PLAIN_DOUBLE, ///< plain message received multiple times (received message with unchanged @ref Fer_Cmd::tgl  value)
   MSG_TYPE_RTC, ///< rtc-only message
   MSG_TYPE_TIMER ///< full length timer programming message
 } fer_msg_type;

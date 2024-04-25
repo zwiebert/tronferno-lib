@@ -129,7 +129,7 @@ extern void (*fer_tx_MSG_TRANSMITTED_ISR_cb)(void);
 /**
  * \brief          Will be called if the next delayed message is ready for transmission in TIME_TS
  *
- * \note           You can use this to start a timer interval which will call \link fer_tx_loop \endlink  after TIME_TS.
+ * \note           You can use this to start a timer interval which will call @ref fer_tx_loop   after TIME_TS.
  *                 Until then there is no work to do. So calling fer_tx_loo would be wasteful.
  *
  * \param time_ts  Duration (in s/10) until the next message is ready for transmission
@@ -138,15 +138,15 @@ extern void (*fer_tx_READY_TO_TRANSMIT_cb)(uint32_t time_ts);
 
 /**
  * \brief   Do work.
- * \note    Call this from main thread in reaction to \link fer_tx_MSG_TRANSMITTED_ISR_cb  \endlink calls.
+ * \note    Call this from main thread in reaction to @ref fer_tx_MSG_TRANSMITTED_ISR_cb   calls.
  * \note    Call this also from a timer interval in main thread, after pushing a delayed message (to avoid polling)
- * \note    Setup that interval in reaction to \link fer_tx_READY_TO_TRANSMIT_cb \endlink
+ * \note    Setup that interval in reaction to @ref fer_tx_READY_TO_TRANSMIT_cb 
  */
 void fer_tx_loop(void);
 
 /**
  * \brief  Do some work
- * \note   Should be called from main thread as reaction to \link fer_rx_MSG_RECEIVED_ISR_cb \endlink.
+ * \note   Should be called from main thread as reaction to @ref fer_rx_MSG_RECEIVED_ISR_cb .
  */
 void fer_rx_loop(void);
 
@@ -167,7 +167,7 @@ void fer_rx_tick(bool rx_pin_lvl);
 /**
  * \brief     Do some work in transmitting a message
  * \note      Should be called from a timer ISR with  200us (= 5kHz)
- * \note      Timing is less critical, because the output pin is set separately by \link fer_tx_setOutput \endlink.
+ * \note      Timing is less critical, because the output pin is set separately by @ref fer_tx_setOutput .
  */
 void fer_tx_dck(void);
 

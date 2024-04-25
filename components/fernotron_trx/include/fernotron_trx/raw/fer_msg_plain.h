@@ -18,10 +18,10 @@
  */
 struct __attribute__ ((packed)) Fer_Cmd  {
   uint8_t addr[FER_CMD_ADDR_CT];  ///< Device address
-  fer_memb memb :4;  ///< \link fer_memb \endlink
+  fer_memb memb :4;  ///< @ref fer_memb 
   uint8_t tgl :4;  ///< kind of a message ID. Incremented for each unique message sent
-  fer_cmd cmd :4;  ///< \link fer_cmd \endlink
-  fer_grp grp :4;  ///< \link fer_grp \endlink
+  fer_cmd cmd :4;  ///< @ref fer_cmd 
+  fer_grp grp :4;  ///< @ref fer_grp 
 };
 
 
@@ -44,7 +44,7 @@ static_assert(sizeof(fer_cmd_row) == FER_CMD_BYTE_CT, "wrong msg size");
 #endif
 
 //
-/// \brief device type (\link fer_dat_ADDR_2 \endlink)
+/// \brief device type (@ref fer_dat_ADDR_2 )
 enum Fer_DevType : uint8_t {
   FER_PlainSender = 0x10,   ///< type byte of plain sender addresses
   FER_SunSensor = 0x20,   ///< type byte of  sun-sensor addresses

@@ -58,7 +58,7 @@ void fer_rx_getQuality(struct fer_rx_quality *dst);
 
 /**
  * \brief          Transmit an RF message asynchronously
- * \param msg      Buffer holding the message. Must be valid until \link fer_tx_MSG_TRANSMITTED_ISR_cb \endlink is called.
+ * \param msg      Buffer holding the message. Must be valid until @ref fer_tx_MSG_TRANSMITTED_ISR_cb is called.
  * \param msg_type Message type (=size) to send
  */
 void fer_tx_transmitFerMsg(fer_rawMsg *msg, fer_msg_type msg_type);

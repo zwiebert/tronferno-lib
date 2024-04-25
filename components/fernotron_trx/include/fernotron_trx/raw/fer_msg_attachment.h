@@ -62,14 +62,14 @@ typedef uint8_t fer_astro_bd[FER_FPR_ASTRO_HEIGHT][FER_PRG_BYTE_CT];
 typedef uint8_t fer_wdtimer_bd[FER_FPR_TIMER_HEIGHT][FER_PRG_BYTE_CT];
 
 /**
- * \brief  Structured RTC message row (\link fer_fpr00 \endlink). Programs the devices internal RTC.
+ * \brief  Structured RTC message row (@ref fer_fpr00 ). Programs the devices internal RTC.
  */
 struct __attribute__((__packed__)) fer_rtc_sd {
   uint8_t secs; ///< seconds
   uint8_t mint; ///< minutes
   uint8_t hour; ///< hour
   union {
-    uint8_t wDayMask; ///< week-day bit-mask Bits defined in: \link fer_rtc_wdayMaskBits \endlink
+    uint8_t wDayMask; ///< week-day bit-mask Bits defined in: @ref fer_rtc_wdayMaskBits 
     struct {
       bool sun:1;
       bool mon:1;
@@ -104,7 +104,7 @@ struct __attribute__((__packed__)) fer_rtc_sd {
       uint8_t unused_6 :1; ///<
       uint8_t sunAuto :1; ///<  Enable sun-automatic (sun-sensor)
     } bits; ///< Flag-bits as bitfield
-  } flags; ///< Flags (\link fer_fpr00_FlagBitsValues \endlink)
+  } flags; ///< Flags (@ref fer_fpr00_FlagBitsValues )
   uint8_t checkSum; ///< Sum of all previous bytes in message
 };
 
@@ -181,7 +181,7 @@ typedef struct __attribute__((__packed__)) fer_raw_msg {
   union fer_rtc rtc; ///< RTC Message
   union fer_wdtimer wdtimer; ///<  Weekly/Daily timers
   union fer_astro astro; ///<  Astro timers
-  fer_last_byte_data last; ///< Last row \link fer_fpr17 \endlink (special/unknown values)
+  fer_last_byte_data last; ///< Last row @ref fer_fpr17  (special/unknown values)
 }  fer_rawMsg;
 
 #ifdef __cplusplus

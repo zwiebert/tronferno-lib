@@ -128,14 +128,14 @@ enum fer_fpr17 {
  *  There are two timers per row (8 timers in 4 rows). This enum describes their order
  */
 enum fer_fpr_tim {
-  fpr_tim_sun, ///< Weekly Sunday in \link fer_fpr01 \endlink
-  fpr_tim_mon, ///< Weekly Monday in \link fer_fpr01 \endlink
-  fpr_tim_tue, ///< Weekly Tuesday in \link fer_fpr02 \endlink
-  fpr_tim_wed, ///< Weekly Wednesday in \link fer_fpr02 \endlink
-  fpr_tim_thu, ///< Weekly Thursday in \link fer_fpr03 \endlink
-  fpr_tim_fri, ///< Weekly Friday in \link fer_fpr03 \endlink
-  fpr_tim_sat, ///< Weekly Saturday in \link fer_fpr04 \endlink
-  fpr_tim_daily ///< Daily in \link fer_fpr04 \endlink
+  fpr_tim_sun, ///< Weekly Sunday in @ref fer_fpr01 
+  fpr_tim_mon, ///< Weekly Monday in @ref fer_fpr01 
+  fpr_tim_tue, ///< Weekly Tuesday in @ref fer_fpr02 
+  fpr_tim_wed, ///< Weekly Wednesday in @ref fer_fpr02 
+  fpr_tim_thu, ///< Weekly Thursday in @ref fer_fpr03 
+  fpr_tim_fri, ///< Weekly Friday in @ref fer_fpr03 
+  fpr_tim_sat, ///< Weekly Saturday in @ref fer_fpr04 
+  fpr_tim_daily ///< Daily in @ref fer_fpr04 
 };
 
 

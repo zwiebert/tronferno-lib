@@ -44,7 +44,7 @@ void fer_msg_raw_from_time(fer_rawMsg *msg, time_t now, fer_msg_type t);
 
 /**
  * \brief          Set/Clear options in message
- * \param flags    \link fer_fpr00_FlagBitsValues  \endlink (e.g flag_Random, flag_SunAuto)
+ * \param flags    @ref fer_fpr00_FlagBitsValues   (e.g flag_Random, flag_SunAuto)
  * \param mask     Bit mask of the flags to set or clear
  */
 void fer_msg_raw_from_flags(fer_rawMsg *msg, uint8_t flags, uint8_t mask);
@@ -87,7 +87,7 @@ void fer_msg_rtc_from_time(struct fer_rtc_sd *msg, time_t now,  fer_msg_type t);
 
 /**
  * \brief          Set/Clear options in rtc line of message
- * \param flags    \link fer_fpr00_FlagBitsValues  \endlink (e.g flag_Random, flag_SunAuto)
+ * \param flags    @ref fer_fpr00_FlagBitsValues   (e.g flag_Random, flag_SunAuto)
  * \param mask     Bit mask of the flags to set or clear
  */
 void fer_msg_from_flags(struct fer_rtc_sd *msg, uint8_t flags, uint8_t mask);

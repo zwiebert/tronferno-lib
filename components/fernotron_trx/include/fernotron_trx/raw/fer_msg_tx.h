@@ -24,7 +24,7 @@ extern volatile bool fer_tx_messageToSend_isReady;
 /**
  * \brief          Push a raw message to send queue
  * \param fsb      plain part of the message
- * \param msgType  Message kind.  If not a plain message, the extended message data must be already in buffer \link fer_rawMsg_buf_tx \endlink
+ * \param msgType  Message kind.  If not a plain message, the extended message data must be already in buffer @ref fer_rawMsg_buf_tx 
  * \param repeats  Repeat sending the message N times
  * \param delay    To delay the actual sending of message (in s/10)
  * \return         true for success
