@@ -29,8 +29,11 @@ static bool ferCmd_isEqual(const Fer_Cmd a, const Fer_Cmd b) {
   if (a.memb != b.memb)
     return false;
 
+#if 1
   if (a.tgl != b.tgl)
     return false;
+#endif
+
 #endif
   return true;
 
@@ -51,7 +54,6 @@ void fer_rx_loop() {
       if (ferCmd_isEqual(last_received_sender.sd, fer_rx_msg->cmd.sd.cmd)) {
         evt.kind = MSG_TYPE_PLAIN_DOUBLE;
       } else {
-        memcpy(&last_received_sender.data, fer_rx_msg->cmd.bd, 5);
         last_received_sender = evt.fsb;
       }
     }

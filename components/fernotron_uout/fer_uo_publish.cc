@@ -345,6 +345,17 @@ void uoApp_publish_fer_msgSent(const struct Fer_MsgPlainCmd *msg) {
     }
     uoCb_publish(idxs, buf, flags);
   }
+
+  flags.fmt.json = false;
+  flags.fmt.raw = true;
+  if (auto idxs = uoCb_filter(flags); idxs.size) {
+    so_arg_plain_cmd_t raw;
+    raw.plain_msg = msg;
+    raw.cmd_string = ci.cs;
+    raw.flags.addrType_central = FER_U32_TEST_TYPE(m.a, FER_ADDR_TYPE_CentralUnit);
+    raw.flags.dir_tx = true;
+    uoCb_publish(idxs, &raw, flags);
+  }
 }
 
 void uoApp_publish_fer_msgReceived(const struct Fer_MsgPlainCmd *msg) {
@@ -382,6 +393,17 @@ void uoApp_publish_fer_msgReceived(const struct Fer_MsgPlainCmd *msg) {
       snprintf(buf, sizeof buf, "{\"rc\":{\"type\":\"%s\",\"a\":\"%06lx\",\"c\":\"%s\",\"rssi\":%d}}", ci.fdt,(long unsigned) m.a, ci.cs, rssi);
     }
     uoCb_publish(idxs, buf, flags);
+  }
+
+  flags.fmt.json = false;
+  flags.fmt.raw = true;
+  if (auto idxs = uoCb_filter(flags); idxs.size) {
+    so_arg_plain_cmd_t raw;
+    raw.plain_msg = msg;
+    raw.cmd_string = ci.cs;
+    raw.flags.addrType_central = FER_U32_TEST_TYPE(m.a, FER_ADDR_TYPE_CentralUnit);
+    raw.flags.dir_rx = true;
+    uoCb_publish(idxs, &raw, flags);
   }
 }
 

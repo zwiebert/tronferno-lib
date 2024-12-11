@@ -16,15 +16,10 @@
 #define uo_evt_flag_rfMsgReceived uo_evt_flag_A
 #define uo_evt_flag_timerChange uo_evt_flag_10
 
-
-
-
-
 typedef struct {
   uint8_t g, m;
   struct shutter_timings *st;
 } so_arg_gmt_t;
-
 
 typedef struct {
   uint8_t g, m;
@@ -56,33 +51,42 @@ typedef struct {
 
 typedef struct {
   uint32_t a;
-  bool scanning:1;
-  bool success:1;
-  bool timeout:1; ///< true if timeout reached
-  bool pairing:1; ///< true for pairing, false for unpairing
+  bool scanning :1;
+  bool success :1;
+  bool timeout :1; ///< true if timeout reached
+  bool pairing :1; ///< true for pairing, false for unpairing
 } so_arg_pras_t;
 
 typedef struct {
   uint32_t a;
-  bool scanning:1;
-  bool success:1;
-  bool timeout:1; ///< true if timeout reached
+  bool scanning :1;
+  bool success :1;
+  bool timeout :1; ///< true if timeout reached
 } so_arg_cuas_t;
 
 typedef struct {
-  bool auth_success:1; ///< true if user pressed hardware button successful
-  bool auth_button_timeout:1; ///< true if timeout before pressing hardware button
-  bool auth_button_error:1; ///< true if timeout before pressing hardware button
-  bool auth_timeout:1; ///< true if authentication timed out
-  bool auth_terminated: 1; ///< authentication terminated
-  bool ui_timeout:1;  ///< true if timeout after user interaction
+  bool auth_success :1; ///< true if user pressed hardware button successful
+  bool auth_button_timeout :1; ///< true if timeout before pressing hardware button
+  bool auth_button_error :1; ///< true if timeout before pressing hardware button
+  bool auth_timeout :1; ///< true if authentication timed out
+  bool auth_terminated :1; ///< authentication terminated
+  bool ui_timeout :1;  ///< true if timeout after user interaction
 } so_arg_sep_t;
 
+typedef struct {
+  const struct Fer_MsgPlainCmd *plain_msg; ///< plain message with address and command code
+  const char *cmd_string;  ///<  command code as human readable string e.g. up, down, stop, ...
+  struct {
+    bool dir_rx :1;
+    bool dir_tx :1;
+    bool addrType_central :1;
+  } flags;
+} so_arg_plain_cmd_t;
 
 #include "so_msg.h"
 
-void uoApp_publish_pctChange_gmp(const so_arg_gmp_t a, uo_flagsT tgtFlags = {});
-void uoApp_publish_pctChange_gmp(const so_arg_gmp_t a[], size_t len, uo_flagsT tgtFlags = {});
+void uoApp_publish_pctChange_gmp(const so_arg_gmp_t a, uo_flagsT tgtFlags = { });
+void uoApp_publish_pctChange_gmp(const so_arg_gmp_t a[], size_t len, uo_flagsT tgtFlags = { });
 void uoApp_publish_timer_json(const char *json, bool fragment = true);
 struct Fer_TimerData;
 void uoApp_publish_timer_json(uint8_t g, uint8_t m, struct Fer_TimerData *tda);
@@ -96,14 +100,18 @@ void uoApp_publish_fer_prasState(const so_arg_pras_t args);
 void uoApp_publish_fer_cuasState(const so_arg_cuas_t args);
 void uoApp_publish_fer_sepState(const so_arg_sep_t args, char tag = '\0');
 
-inline const so_arg_pch_t *uoCb_pchFromMsg(const uoCb_msgT msg) {
+inline const so_arg_pch_t* uoCb_pchFromMsg(const uoCb_msgT msg) {
   if (msg.flags.evt.pin_change && msg.flags.fmt.raw)
-    return static_cast<const so_arg_pch_t *>(msg.cptr);
+    return static_cast<const so_arg_pch_t*>(msg.cptr);
   return nullptr;
 }
-inline const so_arg_gmp_t *uoCb_gmpFromMsg(const uoCb_msgT msg) {
+inline const so_arg_gmp_t* uoCb_gmpFromMsg(const uoCb_msgT msg) {
   if (msg.flags.evt.uo_evt_flag_pctChange && msg.flags.fmt.raw)
-    return static_cast<const so_arg_gmp_t *>(msg.cptr);
+    return static_cast<const so_arg_gmp_t*>(msg.cptr);
   return nullptr;
 }
-
+inline const so_arg_plain_cmd_t* uoCb_plainCmdFromMsg(const uoCb_msgT msg) {
+  if ((msg.flags.evt.uo_evt_flag_rfMsgReceived && msg.flags.fmt.raw) || (msg.flags.evt.uo_evt_flag_msgSent && msg.flags.fmt.raw))
+    return static_cast<const so_arg_plain_cmd_t*>(msg.cptr);
+  return nullptr;
+}
