@@ -1,0 +1,14 @@
+<map id="fernotron/sep/set_endpos.h" name="fernotron/sep/set_endpos.h">
+<area shape="rect" id="node1" title="Mode for setting shutter end positions." alt="" coords="5,5,204,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="7,266,90,293"/>
+<area shape="rect" id="node3" href="$fer__trx__c__api_8h.html" title="C&#45;API for sending and receiving Fernotron RF messages." alt="" coords="177,80,331,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="83,177,247,203"/>
+<area shape="rect" id="node5" href="$timer__data_8h.html" title="vocabulary types to program Fernotron automatic (timers)" alt="" coords="271,169,418,211"/>
+<area shape="rect" id="node12" title=" " alt="" coords="442,177,506,203"/>
+<area shape="rect" id="node6" title=" " alt="" coords="117,266,188,293"/>
+<area shape="rect" id="node7" title=" " alt="" coords="212,266,283,293"/>
+<area shape="rect" id="node8" title=" " alt="" coords="307,266,377,293"/>
+<area shape="rect" id="node9" title=" " alt="" coords="402,266,469,293"/>
+<area shape="rect" id="node10" title=" " alt="" coords="493,259,629,300"/>
+<area shape="rect" id="node11" title=" " alt="" coords="653,266,756,293"/>
+</map>
