@@ -1,6 +1,9 @@
 /**
  * \file   fernotron_trx/raw/fer_radio_timings_us.h
  * \brief  RF message timings for Fernotron
+ *
+ *         Exact timings are used by transmitter code. Fuzzy min/max timings are used by receiver code.
+ *         Timings are in microseconds and should be divisible by 200.
  * \author bertw
  */
 
@@ -25,6 +28,7 @@ constexpr unsigned FER_PRE_BIT_CT = 7; ///< 7 clock periods per preamble
  */
 constexpr unsigned FER_INIT_WIDTH_US = 50000;  ///< \brief duration of lead-in-bit (TX-only)
 constexpr unsigned FER_INIT_NEDGE_US = 25000;  ///< \brief duration until negative edge of lead-in-bit (TX-only)
+constexpr unsigned FER_INIT_WIDTH_MIN_US = 16000; ///< \brief minimal duration of lead-in-bit for RX
 
 /**
  * \verbatim
@@ -32,10 +36,18 @@ constexpr unsigned FER_INIT_NEDGE_US = 25000;  ///< \brief duration until negati
  * before sending any data we have 7 pre-bits
  * /--\__ (2_on + 2_off = 4) * 7
  * (200us * 4 * 7)
+ *
+ * Real timings of original hardware:
+ * central 2411: n-edge: 440us period: 800us
+ * sun-sensor 2440: n-edge: 940, period: 1700us
  * \endverbatim
  */
-constexpr unsigned FER_PRE_WIDTH_US = 800;  ///< \brief duration of preamble-bit
-constexpr unsigned FER_PRE_NEDGE_US = 400;  ///< \brief duration until negative edge of preamble-bit
+constexpr unsigned FER_PRE_WIDTH_US = 800;  ///< \brief exact duration of preamble-bit for TX
+constexpr unsigned FER_PRE_WIDTH_MIN_US = 600;  ///< \brief minimal duration of preamble-bit for RX 600us
+constexpr unsigned FER_PRE_WIDTH_MAX_US = 2000; ///< \brief maximal duration of preamble-bit for RX 2000us
+constexpr unsigned FER_PRE_NEDGE_US = 400;  ///< \brief exact duration until negative edge of preamble-bit for TX
+constexpr unsigned FER_PRE_NEDGE_MIN_US = 200;  ///< \brief minimal duration until negative edge of preamble-bit for RX
+constexpr unsigned FER_PRE_NEDGE_MAX_US = 1200;  ///< \brief maximal duration until negative edge of preamble-bit for RX
 
 /**
  * \verbatim
@@ -45,19 +57,22 @@ constexpr unsigned FER_PRE_NEDGE_US = 400;  ///< \brief duration until negative 
  * (200us * 18 * 1)
  * \endverbatim
  */
-constexpr unsigned FER_STP_WIDTH_US = 3600; ///< \brief duration of stop-bit
-constexpr unsigned FER_STP_NEDGE_US = 400; ///< \brief duration until negative edge of stop-bit
+constexpr unsigned FER_STP_WIDTH_US = 3600; ///< \brief exact duration of stop-bit for TX
+constexpr unsigned FER_STP_WIDTH_MIN_US = 3000; ///< \brief minimal duration of stop-bit for RX
+constexpr unsigned FER_STP_WIDTH_MAX_US = 6000; ///< \brief maximal duration of stop-bit for RX
+constexpr unsigned FER_STP_NEDGE_US = 400; ///< \brief exact duration until negative edge of stop-bit for TX
+constexpr unsigned FER_STP_NEDGE_MIN_US = 200; ///< \brief minimal duration until negative edge of stop-bit for RX
+constexpr unsigned FER_STP_NEDGE_MAX_US = 1200; ///< \brief maximal duration until negative edge of stop-bit for RX
 
 /**
  * \verbatim
- * LEAD OUT BIT - ends last word in transmission
- * 1 stop bit comes before each preamble and each data word
- * /--\__________________ (2_on + 16_off = 18) * 1
- * (200us * 18 * 1)
+ * LEAD OUT BIT - ends last word in transmission (an elongated stop bit, with same negative edge timing)
+ * /--\______________________________________________________________________ (2_on + 70_off = 72) * 1
+ * (200us * 72 * 1)
  * \endverbatim
  */
-constexpr unsigned FER_LEAD_OUT_WIDTH_US = 3600 * 4; ///< \brief duration of stop-bit
-constexpr unsigned FER_LEAD_OUT_NEDGE_US = 400; ///< \brief duration until negative edge of stop-bit
+constexpr unsigned FER_LEAD_OUT_WIDTH_US = 14400; ///< \brief duration of lead-out-bit
+constexpr unsigned FER_LEAD_OUT_NEDGE_US = 400; ///< \brief duration until negative edge of lead-out-bit
 
 /**
  * \verbatim
@@ -69,32 +84,17 @@ constexpr unsigned FER_LEAD_OUT_NEDGE_US = 400; ///< \brief duration until negat
  * (200us * 6 * 10)
  * \endverbatim
  */
-constexpr unsigned FER_BIT_WIDTH_US = 1200; ///< \brief duration of word-bit
+constexpr unsigned FER_BIT_WIDTH_US = 1200; ///< \brief exact duration of word-bit for TX
+constexpr unsigned FER_BIT_WIDTH_MIN_US = 1000; ///< \brief maximal duration of word-bit for TX
+constexpr unsigned FER_BIT_WIDTH_MAX_US = 1400; ///< \brief minimal duration of word-bit for RX
 constexpr unsigned FER_BIT_SHORT_US = 400; ///< \brief short duration until negative edge of word-bit
 constexpr unsigned FER_BIT_LONG_US = 800; ///< \brief long duration until negative edge of word-bit
-constexpr unsigned FER_BIT_WIDTH_MIN_US = 1400; ///< \brief duration of word-bit
-constexpr unsigned FER_BIT_WIDTH_MAX_US = 1000; ///< \brief duration of word-bit
-
-constexpr unsigned FER_INIT_WIDTH_MIN_US = 80 * 200;
-
-constexpr unsigned FER_STP_WIDTH_MIN_US = 15 * 200;
-constexpr unsigned FER_STP_WIDTH_MAX_US = 30 * 200;
-constexpr unsigned FER_STP_NEDGE_MIN_US = 1 * 200;
-constexpr unsigned FER_STP_NEDGE_MAX_US = 6 * 200;
-
-/**
- * \verbatim
- * Preamble timings
- * central 2411: n-edge: 440us period: 800us
- * sun-sensor 2440: n-edge: 940, period: 1700us
- */
-constexpr unsigned FER_PRE_WIDTH_MIN_US = 3 * 200; // 600us
-constexpr unsigned FER_PRE_WIDTH_MAX_US = 10 * 200; // 2000us
-constexpr unsigned FER_PRE_NEDGE_MIN_US = 1 * 200; // 200us
-constexpr unsigned FER_PRE_NEDGE_MAX_US = 6 * 200; // 1200us
+constexpr unsigned FER_BIT_SAMP_POS_US = 600; ///< \brief for receiving: look if negative edge lies before or after
 
 
-constexpr unsigned FER_BIT_SAMP_POS_US = 3 * 200; ///< for receiving: look if negative edge lies before or after
+
+
+
 
 
 // -----stop------- ---------pre--    ----stop------     --data-word---     ----stop------     --data-word---     ----stop------      ...  + -- last data-word---

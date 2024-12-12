@@ -16,13 +16,14 @@
 #include "fernotron_trx/raw/fer_radio_timings_us.h"
 #include "debug/dbg.h"
 
+#include <esp_attr.h>
+
 struct ftrx_counter {
   uint16_t Words;
   uint16_t Ticks, Bits;
 };
 #define US2DCK(us) FER_TX_US_TO_TCK(us)
 
-#ifdef CONFIG_APP_USE_FER_TRANSMITTER
 /////////////////////////// transmitter /////////////////////////
 static struct ftrx_counter ftxCount;
 static bool output_level;   // output line
@@ -31,8 +32,6 @@ volatile bool fer_tx_messageToSend_isReady;
 static fer_rawMsg *fer_tx_buf;
 
 void (*fer_tx_MSG_TRANSMITTED_ISR_cb)(void);
-
-
 
 void fer_tx_transmitFerMsg(fer_rawMsg *msg, fer_msg_type msg_type) {
   precond(!fer_tx_isTransmitterBusy());
@@ -71,7 +70,6 @@ static inline void IRAM_ATTR fer_tx_msg_transmitted_isr_cb() {
     fer_tx_MSG_TRANSMITTED_ISR_cb();
 }
 
-
 static bool IRAM_ATTR fer_tx_send_message() {
   static enum {
     state_lead_in, state_preamble, state_data_stop_bit, state_data_word, state_lead_out,
@@ -109,7 +107,7 @@ static bool IRAM_ATTR fer_tx_send_message() {
 
   }
 
-return false; // continue
+  return false; // continue
 }
 
 static void IRAM_ATTR fer_tx_dck_send_message() {
@@ -122,7 +120,6 @@ static void IRAM_ATTR fer_tx_dck_send_message() {
     fer_tx_msg_transmitted_isr_cb();
   }
 }
-
 
 bool IRAM_ATTR fer_tx_setOutput(void) {
   return output_level;
@@ -141,5 +138,4 @@ bool IRAM_ATTR ftrx_testLoopBack_getRxPin() {
 void IRAM_ATTR ftrx_testSetOutputLevel(bool level) {
   output_level = level;
 }
-#endif
 
