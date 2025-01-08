@@ -11,7 +11,10 @@
 #include "utils_misc/int_macros.h"
 #include "fernotron_trx/raw/fer_radio_timings_us.h"
 #include <fernotron_trx/raw/rf_capture.hh>
+#ifndef HOST_TESTING
 #include <esp_attr.h>
+#endif
+
 
 
 volatile fer_msg_type fer_rx_messageReceived;

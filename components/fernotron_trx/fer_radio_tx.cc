@@ -16,7 +16,9 @@
 #include "fernotron_trx/raw/fer_radio_timings_us.h"
 #include "debug/dbg.h"
 
+#ifndef HOST_TESTING
 #include <esp_attr.h>
+#endif
 
 struct ftrx_counter {
   uint16_t Words;
