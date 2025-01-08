@@ -8,6 +8,10 @@ menu "zwiebert: Tronferno Transceiver"
         bool "Activate FER_RECEIVER"
         default y
 
+    config TRONFERNO_ENABLE_RF_CAPTURE
+        bool "Activate RF RX capture for debugging"
+        default y
+
     config TRONFERNO_TRX_DEBUG
       bool "Enable debug messages"
       default n

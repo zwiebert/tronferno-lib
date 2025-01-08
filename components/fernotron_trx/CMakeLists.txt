@@ -1,6 +1,6 @@
 set(srcs   astro.cc fer_api.cc fer_msg_basic.cc fer_msg_rx.cc fer_msg_tx.cc fer_msg_tx_queue.cc
      fer_radio_parity.cc fer_rawmsg_buffer.cc fer_rawmsg_build.cc
-    fer_trx_api.cc
+    fer_trx_api.cc timer_data.cc
     repeater/repeater.cc
     )
 
@@ -11,7 +11,9 @@ endif()
 if(CONFIG_APP_USE_FER_RECEIVER)
   set(srcs ${srcs} fer_radio_rx.cc)
 endif()
-
+if(CONFIG_TRONFERNO_ENABLE_RF_CAPTURE)
+  set(srcs ${srcs} rf_capture.cc)
+endif()
 idf_component_register(
     SRCS ${srcs} 
     INCLUDE_DIRS "include" 

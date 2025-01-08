@@ -10,7 +10,7 @@
 #include "debug/dbg.h"
 #include "utils_misc/int_macros.h"
 #include "fernotron_trx/raw/fer_radio_timings_us.h"
-
+#include <fernotron_trx/raw/rf_capture.hh>
 #include <esp_attr.h>
 
 
@@ -364,7 +364,9 @@ void fer_rx_getQuality(struct fer_rx_quality *dst) {
 }
 
 void IRAM_ATTR fer_rx_tick(bool pin_level) {
-
+#ifdef CONFIG_TRONFERNO_ENABLE_RF_CAPTURE
+  rfCapture_sample_level(pin_level);
+#endif
   bool msg_received = false;
 
   // prevent receiving our own transmitter
