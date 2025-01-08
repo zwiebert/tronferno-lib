@@ -1,4 +1,3 @@
-
 #include "debug/dbg.h"
 #include "fernotron/alias/pairings.h"
 #include "fernotron_trx/astro.h"
@@ -14,6 +13,7 @@
 #include <fernotron_trx/fer_trx_api.hh>
 #include <fernotron_uout/fer_uo_publish.h>
 #include <fernotron_trx/repeater/repeater.h>
+#include "fernotron/auto/fau_tdata_store.h"
 #include <utils_misc/int_types.h>
 #include <string.h>
 #include <stdint.h>
@@ -66,6 +66,16 @@ public:
     } else if (msg_type == MSG_TYPE_TIMER) {
       Fer_MsgPlainCmd plain_msg = get_msg();
       uoApp_publish_fer_msgAutoReceived(plain_msg, *fer_rx_msg);
+
+      // Save a received timer to our timer storage XXX: Should maybe enabled by user interface
+      // purpose: transfer of timer data from original Fernotron programming central
+      // problem: astro offset it not in the raw data and can only be guessed from astro timer data
+      if (plain_msg.a == fer_config.cu) {
+        Fer_TimerData tda(*fer_rx_msg);
+        if (fer_stor_timerData_save(&tda, plain_msg.g, plain_msg.m)) {
+          uoApp_publish_timer_json(plain_msg.g, plain_msg.m, &tda);
+        }
+      }
     }
 #endif
 

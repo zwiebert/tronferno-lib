@@ -71,13 +71,13 @@ struct __attribute__((__packed__)) fer_rtc_sd {
   union {
     uint8_t wDayMask; ///< week-day bit-mask Bits defined in: @ref fer_rtc_wdayMaskBits 
     struct {
-      bool sun:1;
-      bool mon:1;
-      bool tue:1;
-      bool wed:1;
-      bool thu:1;
-      bool fri:1;
-      bool sat:1;
+      bool sun :1;
+      bool mon :1;
+      bool tue :1;
+      bool wed :1;
+      bool thu :1;
+      bool fri :1;
+      bool sat :1;
     } wDayBits;
   };
   uint8_t mday; ///<day of month 1..31
@@ -117,12 +117,23 @@ union fer_rtc {
 /// \brief  Minute/Hour pair used in timers
 struct fer_time {
   uint8_t mint, hour;
+
+  operator bool() const {
+    return hour != 0x0f && mint != 0x0ff;
+  }
+  bool inline operator ==(const fer_time &other) const {
+    return hour == other.hour && mint == other.mint;
+  }
 };
 
 /// \brief Up/Down pair used in timers
 struct fer_timer {
   struct fer_time up; ///<
   struct fer_time down; ///<
+
+  bool inline operator ==(const fer_timer &other) const {
+    return up == other.up && down == other.down;
+  }
 };
 
 /// \brief A row containing 2 timers
@@ -139,9 +150,9 @@ union __attribute__((__packed__)) fer_wdtimer {
 
   struct fer_timer_row rows_arr[4]; ///< Weekly/Daily timers as row-array
 
-  struct  {
+  struct {
     struct fer_timer_row sun_mon, tue_wed, thu_fri, sat_daily; ///<
-  }  rows; ///< Weekly/Daily timer rows as structured data
+  } rows; ///< Weekly/Daily timer rows as structured data
 
   struct {
     struct fer_timer sun, mon; ///<  2 Weekday timers
@@ -152,20 +163,20 @@ union __attribute__((__packed__)) fer_wdtimer {
     uint8_t cs2; ///< Sum of all previous bytes in message
     struct fer_timer sat, daily; ///<  Weekday and daily timer
     uint8_t cs3; ///< Sum of all previous bytes in message
-  }  days; ///< Weekly/Daily timers as structured data
+  } days; ///< Weekly/Daily timers as structured data
 };
 
 /// \brief Astro row
 union __attribute__((__packed__)) fer_astro_row {
   uint8_t bd[FER_PRG_BYTE_CT]; ///<  Astro row as byte data
-  struct  {
+  struct {
     struct fer_time times[4]; ///<  Each row contains 4 wall times
     uint8_t checkSum; ///< Sum of all previous bytes in message
-  }  sd; ///< Astro row as structured data
+  } sd; ///< Astro row as structured data
 };
 
 /// \brief Block of astro rows
-union __attribute__((__packed__))  fer_astro {
+union __attribute__((__packed__)) fer_astro {
   fer_astro_bd bd; ///< Astro block as byte data
   union fer_astro_row rows[FER_FPR_ASTRO_HEIGHT]; ///< Astro block as row array
 };
@@ -182,7 +193,7 @@ typedef struct __attribute__((__packed__)) fer_raw_msg {
   union fer_wdtimer wdtimer; ///<  Weekly/Daily timers
   union fer_astro astro; ///<  Astro timers
   fer_last_byte_data last; ///< Last row @ref fer_fpr17  (special/unknown values)
-}  fer_rawMsg;
+} fer_rawMsg;
 
 #ifdef __cplusplus
 static_assert(sizeof(fer_raw_msg) == FER_CMD_BYTE_CT + FER_PRG_PACK_CT * FER_PRG_BYTE_CT, "wrong msg size");
