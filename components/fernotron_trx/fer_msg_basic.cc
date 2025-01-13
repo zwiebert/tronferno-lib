@@ -17,7 +17,7 @@ fer_init_sender(fer_sbT *fsb, uint32_t devID) {
 
   fer_init_plain(fsb, devID);
 
-  switch (GET_BYTE_2(devID)) {
+  switch ((GET_BYTE_2(devID) & 0xf0)) {
     case FER_PlainSender:
         FER_SB_PUT_MEMB(fsb, fer_memb_FromPlainSender);
     break;

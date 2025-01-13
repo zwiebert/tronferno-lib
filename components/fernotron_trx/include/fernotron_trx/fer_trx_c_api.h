@@ -25,7 +25,7 @@
  * \return      true for match
  */
 inline bool FER_U32_TEST_TYPE(uint32_t a, unsigned t) {
-  return (a >> 16) == t;
+  return ((a >> 16) & 0xffff0) == t;
 }
 
 /// \brief Fernotron command codes.
