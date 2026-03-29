@@ -55,35 +55,7 @@ static void so_gmbitmask_to_str(char *dst, Fer_GmSet *mm) {
   }
 }
 
-
 /////////////////////////////////////////////////////////////////////////////////
-void soMsg_sep_enable(class UoutWriter &td) {
-  D(td.write("sep enable\n"));
-}
-void soMsg_sep_disable(class UoutWriter &td) {
-  D(td.write("sep disable\n"));
-}
-void soMsg_sep_button_pressed_error(class UoutWriter &td) {
-  td.write("error: hardware button is pressed\n");
-}
-
-/////////////////////////////////////////////////////////////////////////////////
-static uint16_t fer_cuas_msgid;
-void soMsg_cuas_start(class UoutWriter &td, uint16_t id) {
-  fer_cuas_msgid = id;
-  td.write("U: Press Stop on the Fernotron central unit\n");
-}
-
-void soMsg_cuas_timeout(class UoutWriter &td) {
-  td.write("U: Nothing received\n");
-  reply_id_message(td, fer_cuas_msgid, "cuas=time-out", 0);
-}
-
-void soMsg_cuas_done(class UoutWriter &td) {
-  td.write("U: Central Unit received and stored\n");
-  reply_message(td, "cuas=ok", 0);
-}
-
 void soMsg_cuas_state(class UoutWriter &td, int state) {
   td.so().print("cuas", state);
 

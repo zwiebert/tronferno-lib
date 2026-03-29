@@ -6,13 +6,7 @@ class UoutWriter;
 
 void soMsg_sep_obj_begin(UoutWriter &td);
 void soMsg_sep_obj_end(UoutWriter &td);
-void soMsg_sep_enable(UoutWriter &td);
-void soMsg_sep_disable(UoutWriter &td);
-void soMsg_sep_button_pressed_error(UoutWriter &td);
 ;
-void soMsg_cuas_start(UoutWriter &td, uint16_t id);
-void soMsg_cuas_timeout(UoutWriter &td);
-void soMsg_cuas_done(UoutWriter &td);
 void soMsg_cuas_state(UoutWriter &td, int state);
 void soMsg_pras_start_listening(UoutWriter &td, uint16_t id);
 void soMsg_pras_stop_listening(UoutWriter &td);
