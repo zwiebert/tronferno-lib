@@ -15,7 +15,7 @@ idf_component_register(
     INCLUDE_DIRS "./include" 
     REQUIRES      utils_misc fernotron_trx
     PRIV_REQUIRES utils_debug utils_time fernotron_uout uout
-                  main_loop storage kvs gpio 
+                  main_loop storage kvs 
      )
 
 component_compile_options(${comp_compile_opts})
