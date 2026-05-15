@@ -24,5 +24,5 @@ idf_component_register(
     PRIV_REQUIRES main_loop utils_time utils_misc cc1101_ook 
      )
 
-component_compile_options(${comp_compile_opts})
-component_compile_features(${comp_compile_feats})
+ 
+target_compile_options(${COMPONENT_LIB} PRIVATE "SHELL:-include sdkconfig.h" -Wno-error=missing-field-initializers)

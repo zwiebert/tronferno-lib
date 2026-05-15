@@ -9,6 +9,11 @@
 
 #include "fer_radio_parity.h"
 #include "utils_misc/int_types.h"
+#ifdef ESP_PLATFORM
+#include <esp_attr.h>
+#else
+#define IRAM_ATTR
+#endif
 
 /*  "t if VAL contains an even number of 1 bits" */
 bool IRAM_ATTR is_bits_even(uint8_t val) {
