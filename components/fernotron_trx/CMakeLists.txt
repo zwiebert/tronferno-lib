@@ -3,6 +3,8 @@ set(srcs   astro.cc fer_api.cc fer_msg_basic.cc fer_msg_rx.cc fer_msg_tx.cc fer_
     fer_trx_api.cc timer_data.cc
     repeater/repeater.cc
     )
+set(platform_srcs "") 
+include("${CMAKE_CURRENT_LIST_DIR}/../../source_filter.cmake" OPTIONAL)
 
 if(CONFIG_APP_USE_FER_TRANSMITTER)
   set(srcs ${srcs} fer_radio_tx.cc)

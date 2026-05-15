@@ -7,6 +7,9 @@
 
 
 #include <unity.h>
+#ifdef TEST_HOST
+#include <test_runner.h>
+#endif
 
 #include <string.h>
 #include "utils_misc/int_types.h"
@@ -102,12 +105,9 @@ static void test_gm_bitmask_iterator() {
 
 }
 
-int main() {
-  UNITY_BEGIN();
 
-  RUN_TEST(test_gm_bitmask_iterator);
-
-  return UNITY_END();
+TEST_CASE("gm_bitmask", "[fernotron]")
+{
+  test_gm_bitmask_iterator();
 }
-
 #pragma GCC pop_options
