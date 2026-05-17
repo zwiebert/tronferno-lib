@@ -5,4 +5,4 @@ idf_component_register(SRC_DIRS "."
                                      unity 
                        )
 
-component_compile_options("SHELL:-include sdkconfig.h")
+
